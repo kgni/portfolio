@@ -11,6 +11,7 @@ html {
 body {
 	font-family: 'Inter', sans-serif;
 	color: #1d2939;
+	overflow-x: hidden;
 }
 
 /* GENERAL STYLES */
@@ -22,6 +23,10 @@ a:visited {
 	font-weight: 500;
 }
 
+.container {
+	width: 70%;
+	margin: 0 auto;
+}
 /* HERO */
 
 .hero {
@@ -32,7 +37,7 @@ a:visited {
 /* nav */
 
 .main-nav {
-	/* height: 15vh; */
+	height: 10vh;
 	padding-top: 6rem;
 	padding-right: 12rem;
 	padding-left: 12rem;
@@ -82,10 +87,11 @@ a:visited {
 .text-hero {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 	flex-direction: column;
 	gap: 1.2rem;
 	padding-top: 16rem;
+	height: 50vh;
 }
 
 .text-hero h1 {
@@ -103,16 +109,21 @@ a:visited {
 	font-size: 1.6rem;
 	text-transform: uppercase;
 	letter-spacing: 20px;
+	display: flex;
+	justify-content: center;
 }
 
 /* social media */
 
 .social-media {
+	height: 40vh;
 	font-size: 2.4rem;
 	display: flex;
 	gap: 2.4rem;
 	justify-content: center;
-	padding-top: 22rem;
+	align-items: flex-end;
+	margin-top: auto;
+	padding-bottom: 4.8rem;
 }
 
 .social-media a:link {
@@ -131,4 +142,13 @@ a:visited {
 
 .section-projects {
 	height: 100vh;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	padding-top: 16rem;
+	font-weight: 900;
+	font-size: 8rem;
 }
