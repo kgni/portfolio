@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	color: #1d2939;
+}
+
+/* GENERAL STYLES */
+
+a:link,
+a:visited {
+	color: #1d2939;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+/* HERO */
+
+.hero {
+	background-color: #f4ead7;
+	height: 100vh;
+	position: relative;
+}
+
+/* nav */
+
+.main-nav {
+	/* height: 15vh; */
+	padding-top: 6rem;
+	padding-right: 12rem;
+	padding-left: 12rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.page-number {
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+.main-nav ul {
+	display: flex;
+	align-items: center;
+	gap: 12rem;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+	font-size: 3.2rem;
+	transition: 100ms ease;
+}
+.main-nav a:hover,
+.main-nav a:active {
+	color: #4f6f99;
+}
+
+/* text hero */
+
+.text-hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1.2rem;
+	padding-top: 16rem;
+}
+
+.text-hero h1 {
+	font-size: 20rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	line-height: 0.9;
+}
+
+.text-hero span {
+	display: block;
+}
+
+.text-hero h3 {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+}
+
+/* social media */
+
+.social-media {
+	font-size: 2.4rem;
+	display: flex;
+	gap: 2.4rem;
+	position: absolute;
+	bottom: 5%;
+	right: 50%;
+	transform: translate(50%);
+}
+
+.social-media a:link {
+	transition: 400ms ease;
+}
+
+.social-media a:hover {
+	transform: scale(1.15);
+}
+
+/* .social-media a:active {
+	transform: scale(0.9);
+} */
+
+/* PROJECTS */
+
+.section-projects {
+	height: 100vh;
+}
