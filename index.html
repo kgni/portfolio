@@ -31,10 +31,13 @@
 					<div class="page-number">01</div>
 					<ul>
 						<li>
-							<a href="#projects">projects</a>
+							<a class="btn active" href="#hero">home</a>
 						</li>
 						<li>
-							<a href="#contact">contact</a>
+							<a class="btn" href="#projects">projects</a>
+						</li>
+						<li>
+							<a class="btn" href="#contact">contact</a>
 						</li>
 					</ul>
 				</nav>
@@ -77,6 +80,9 @@
 				<a href="https://github.com/kgnik" target="_blank">
 					<i class="fa-brands fa-github"></i>
 				</a>
+				<a href="mailto:mail@mdia.dk" target="_blank">
+					<i class="fa-solid fa-envelope"></i>
+				</a>
 			</section>
 		</main>
 		<section id="projects" class="section-projects">
@@ -84,10 +90,13 @@
 				<div class="page-number">02</div>
 				<ul>
 					<li>
-						<a href="#hero">home</a>
+						<a class="btn" href="#hero">home</a>
 					</li>
 					<li>
-						<a href="#contact">contact</a>
+						<a class="btn active" href="#projects">projects</a>
+					</li>
+					<li>
+						<a class="btn" href="#contact">contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -100,29 +109,82 @@
 				<div class="page-number">02</div>
 				<ul>
 					<li>
-						<a href="#hero">home</a>
+						<a class="btn" href="#hero">home</a>
 					</li>
 					<li>
-						<a href="#projects">projects</a>
+						<a class="btn" href="#projects">projects</a>
+					</li>
+					<li>
+						<a class="btn active" href="#contact">contact</a>
 					</li>
 				</ul>
 			</nav>
-			<div class="title container">
-				<h2 data-aos="fade">CONTACT</h2>
-				<section class="social-media">
-					<a href="https://twitter.com/mdiadk" target="_blank">
-						<i class="fa-brands fa-twitter"></i>
-					</a>
-					<a
-						href="https://www.linkedin.com/in/karl-nielsen-2787a6205/"
-						target="_blank"
-					>
-						<i class="fa-brands fa-linkedin"></i>
-					</a>
-					<a href="https://github.com/kgnik" target="_blank">
-						<i class="fa-brands fa-github"></i>
-					</a>
-				</section>
+			<div class="container">
+				<h2 class="title" data-aos="fade">CONTACT</h2>
+				<div class="contact-content">
+					<div class="contact-text">
+						<div class="contact-title">
+							<h3>
+								<span class="">You</span> deserve
+								<span class="break">a beautiful website!</span>
+							</h3>
+							<div class="line"></div>
+						</div>
+						<p>
+							Whether you're selling goods or providing a service, an online
+							platform will elevate your business to the next level.
+						</p>
+
+						<p>
+							I help small businesses stand out on the web by providing them
+							with a unique custom website.
+						</p>
+						<p>
+							You can either contact me by using one of the links below, or by
+							filling in the contact form to the right
+						</p>
+						<p>Let's connect!</p>
+						<section class="contact-social-media">
+							<a href="https://twitter.com/mdiadk" target="_blank">
+								<i class="fa-brands fa-twitter"></i>
+							</a>
+							<a
+								href="https://www.linkedin.com/in/karl-nielsen-2787a6205/"
+								target="_blank"
+							>
+								<i class="fa-brands fa-linkedin"></i>
+							</a>
+							<a href="https://github.com/kgnik" target="_blank">
+								<i class="fa-brands fa-github"></i>
+							</a>
+							<a href="mailto:mail@mdia.dk" target="_blank">
+								<i class="fa-solid fa-envelope"></i>
+							</a>
+						</section>
+					</div>
+					<div class="form">
+						<div class="contact-title">
+							<h3>I'm open to work!</h3>
+							<div class="line"></div>
+						</div>
+						<form action="https://formsubmit.co/mail@mdia.dk" method="POST">
+							<div class="top-row">
+								<input type="hidden" name="_template" value="box" />
+								<input type="text" name="name" required placeholder="name" />
+
+								<input type="email" name="email" required placeholder="email" />
+							</div>
+							<textarea
+								rows="18"
+								name="text"
+								placeholder="write your message here.."
+								required
+							>
+							</textarea>
+							<button type="submit">Send</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</section>
 		<script src="js/main.js"></script>
