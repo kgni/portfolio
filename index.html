@@ -22,7 +22,12 @@
 	<body>
 		<main class="hero">
 			<header class="main-header">
-				<nav class="main-nav">
+				<nav
+					class="main-nav"
+					data-aos="fade"
+					data-aos-duration="2000"
+					data-aos-delay="2000"
+				>
 					<div class="page-number">01</div>
 					<ul>
 						<li>
@@ -35,10 +40,31 @@
 				</nav>
 			</header>
 			<section class="text-hero">
-				<h1>Web <span>Developer</span></h1>
-				<h3>Karl Nielsen</h3>
+				<h1>
+					<span
+						data-aos-easing="ease-in-out-quart"
+						data-aos="slide-right"
+						data-aos-duration="2000"
+					>
+						Web</span
+					>
+					<span
+						data-aos-easing="ease-out"
+						data-aos="slide-left"
+						data-aos-duration="2000"
+						>Developer</span
+					>
+				</h1>
+				<h3 data-aos="fade" data-aos-duration="2000" data-aos-delay="3000">
+					Karl Nielsen
+				</h3>
 			</section>
-			<section class="social-media">
+			<section
+				class="social-media"
+				data-aos="fade"
+				data-aos-duration="2000"
+				data-aos-delay="2000"
+			>
 				<a href="https://twitter.com/mdiadk" target="_blank">
 					<i class="fa-brands fa-twitter"></i>
 				</a>
@@ -57,7 +83,9 @@
 		<script src="js/main.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
-			AOS.init();
+			AOS.init({
+				duration: 2000,
+			});
 		</script>
 	</body>
 </html>
