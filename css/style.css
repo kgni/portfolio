@@ -27,7 +27,6 @@ a:visited {
 .hero {
 	background-color: #f4ead7;
 	height: 100vh;
-	position: relative;
 }
 
 /* nav */
@@ -56,11 +55,26 @@ a:visited {
 .main-nav a:link,
 .main-nav a:visited {
 	font-size: 3.2rem;
-	transition: 100ms ease;
+	transition: 200ms ease;
+	position: relative;
 }
 .main-nav a:hover,
 .main-nav a:active {
-	color: #4f6f99;
+	/* color: hsl(214, 33%, 47%); */
+}
+
+.main-nav a::after {
+	content: '';
+	position: absolute;
+	background-color: #1d2939;
+	height: 3px;
+	width: 0%;
+	left: 0;
+	bottom: -5px;
+	transition: 200ms;
+}
+.main-nav a:hover::after {
+	width: 100%;
 }
 
 /* text hero */
