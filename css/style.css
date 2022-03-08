@@ -6,7 +6,6 @@
 
 html {
 	font-size: 62.5%;
-	height: -webkit-fill-available;
 }
 
 body {
@@ -55,7 +54,6 @@ a:visited {
 .hero {
 	background-color: #f4ead7;
 	height: 100vh;
-	height: -webkit-fill-available;
 }
 
 /* nav */
@@ -178,7 +176,6 @@ a:visited {
 
 .section-projects {
 	height: 100vh;
-	height: -webkit-fill-available;
 }
 
 .title {
@@ -195,7 +192,6 @@ a:visited {
 
 .section-contact {
 	height: 100vh;
-	height: -webkit-fill-available;
 	background-color: #d7f1cb;
 }
 
