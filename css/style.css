@@ -13,7 +13,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	color: #1d2939;
 	overflow-x: hidden;
-	min-height: 100vh;
+	min-height: 100%;
 	min-height: -webkit-fill-available;
 }
 
@@ -39,6 +39,7 @@ a:visited {
 
 @media screen and (prefers-reduced-motion: no-preference) {
 	html {
+		-ms-scroll-snap-type: y mandatory;
 		scroll-snap-type: y mandatory;
 	}
 }
@@ -53,7 +54,8 @@ a:visited {
 
 .hero {
 	background-color: #f4ead7;
-	height: 100vh;
+	height: 100%;
+	min-height: -webkit-fill-available;
 }
 
 /* nav */
@@ -61,8 +63,8 @@ a:visited {
 .main-nav {
 	height: 10vh;
 	padding-top: 6rem;
-	padding-right: 12rem;
-	padding-left: 6rem;
+	margin-right: 12rem;
+	margin-left: 6rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
