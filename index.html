@@ -13,6 +13,7 @@
 		/>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/queries.css" />
 		<script
 			src="https://kit.fontawesome.com/e4b743f868.js"
 			crossorigin="anonymous"
@@ -52,6 +53,7 @@
 						Web</span
 					>
 					<span
+						class="small-title"
 						data-aos-easing="ease-out"
 						data-aos="slide-left"
 						data-aos-duration="2000"
@@ -86,7 +88,7 @@
 			</section>
 		</main>
 		<section id="projects" class="section-projects">
-			<nav class="main-nav">
+			<nav class="main-nav second-nav">
 				<div class="page-number">02</div>
 				<ul>
 					<li>
@@ -105,7 +107,7 @@
 			</div>
 		</section>
 		<section id="contact" class="section-contact">
-			<nav class="main-nav">
+			<nav class="main-nav second-nav">
 				<div class="page-number">03</div>
 				<ul>
 					<li>
@@ -119,7 +121,7 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="container">
+			<div class="container contact-container">
 				<h2 class="title" data-aos="fade">CONTACT</h2>
 				<div class="contact-content">
 					<div class="contact-text">
@@ -128,7 +130,6 @@
 								<span>You deserve</span>
 								<span class="break">a beautiful website!</span>
 							</h3>
-							<div class="line"></div>
 						</div>
 						<p data-aos="fade" data-aos-delay="200">
 							Whether you're selling goods or providing a service, an online
@@ -141,7 +142,7 @@
 						</p>
 						<p data-aos="fade" data-aos-delay="400">
 							You can either contact me by using one of the links below, or by
-							filling in the contact form to the right
+							filling out the contact form.
 						</p>
 						<p data-aos="fade" data-aos-delay="500">Let's connect!</p>
 						<section
@@ -213,7 +214,12 @@
 								required
 							>
 							</textarea>
-							<button data-aos="flip-up" data-aos-delay="2300" type="submit">
+							<button
+								data-aos-offset="0"
+								data-aos="flip-up"
+								data-aos-delay="2300"
+								type="submit"
+							>
 								Send
 							</button>
 						</form>

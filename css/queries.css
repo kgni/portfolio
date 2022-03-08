@@ -1,0 +1,286 @@
+@media (max-width: 1600px) {
+	.container {
+		width: 85%;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 1400px) {
+	.text-hero h1 {
+		font-size: 16rem;
+	}
+}
+
+@media (max-width: 1196px) {
+	.title {
+		margin-bottom: 3.2rem;
+	}
+	.contact-title h3 {
+		font-size: 2rem;
+	}
+
+	.line {
+		width: 100%;
+	}
+
+	.contact-text p {
+		font-size: 1.4rem;
+	}
+
+	textarea {
+		height: 16em;
+	}
+	.title {
+		font-size: 6.8rem;
+	}
+}
+@media (max-width: 1160px) {
+	.text-hero {
+	}
+	.text-hero h1 {
+		font-size: 16rem;
+	}
+	.small-title {
+		font-size: 16rem;
+	}
+}
+@media (max-width: 1080px) {
+	.text-hero h1 {
+		font-size: 17rem;
+	}
+	.small-title {
+		font-size: 10rem;
+	}
+
+	.page-number {
+		font-size: 3.2rem;
+	}
+}
+
+@media (max-width: 1033px) {
+	textarea {
+		height: 17.5em;
+	}
+}
+
+@media (max-width: 863px) {
+	textarea {
+		height: 20em;
+	}
+}
+
+@media (max-width: 853px) {
+	.contact-content {
+		display: flex;
+		gap: 4.8rem;
+	}
+
+	textarea {
+		height: 17.5em;
+	}
+}
+
+@media (max-width: 840px) {
+	textarea {
+		height: 20em;
+	}
+}
+
+@media (max-width: 830px) {
+	.text-hero {
+		display: flex;
+		align-items: center;
+	}
+	.text-hero h1 {
+		font-size: 18rem;
+		text-align: center;
+	}
+	.small-title {
+		font-size: 8rem;
+	}
+
+	.page-number {
+		font-size: 2.4rem;
+	}
+
+	.contact-title h3 {
+		font-size: 1.6rem;
+	}
+
+	.contact-text p {
+		font-size: 1.2rem;
+	}
+
+	textarea {
+		height: 15em;
+	}
+}
+
+@media (max-width: 728px) {
+	textarea {
+		height: 17em;
+	}
+}
+
+@media (max-width: 722px) {
+	.contact-title h3 {
+		letter-spacing: 1px;
+	}
+
+	.top-row {
+		display: block;
+		gap: 1.2rem;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	textarea {
+		height: 14.3em;
+	}
+	.contact-title {
+		height: auto;
+	}
+
+	.title {
+		margin-bottom: 6.8rem;
+	}
+}
+
+@media (max-width: 703px) {
+	textarea {
+		height: 16em;
+	}
+}
+
+@media (max-width: 690px) {
+	.text-hero h1 {
+		font-size: 16rem;
+		text-align: center;
+	}
+	.small-title {
+		font-size: 6rem;
+	}
+
+	.hero,
+	.section-projects,
+	.section-contact {
+		position: relative;
+	}
+
+	.page-number {
+		font-size: 1.8rem;
+		position: absolute;
+		top: 2%;
+		left: 3%;
+		/* transform: translate(50%); */
+		/* display: none; */
+	}
+
+	.main-nav {
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.title {
+		align-items: center;
+		font-size: 6rem;
+	}
+	.second-nav a:link {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 640px) {
+	textarea {
+		height: 18.5em;
+	}
+}
+
+@media (max-width: 533px) {
+	.contact-title h3 {
+		letter-spacing: 0px;
+		font: 1.2rem;
+	}
+	.contact-content {
+		display: block;
+	}
+
+	.contact-content > * {
+		width: 100%;
+	}
+	.title {
+		padding-top: 4rem;
+		margin-bottom: 4rem;
+	}
+
+	.contact-title h3 span {
+		display: inline;
+	}
+
+	.contact-text {
+		margin-bottom: 2.4rem;
+	}
+
+	.top-row {
+		display: flex;
+		gap: 1.2rem;
+	}
+
+	input {
+		width: 50%;
+	}
+
+	.contact-title {
+		margin-bottom: 1.2rem;
+	}
+
+	textarea {
+		height: 12em;
+	}
+}
+
+@media (max-width: 420px) {
+	.main-nav a:link,
+	.main-nav a:visited {
+		font-size: 1.6rem;
+	}
+
+	.page-number {
+		font-size: 1.2rem;
+	}
+	.text-hero h1 {
+		font-size: 12rem;
+		text-align: center;
+	}
+
+	.small-title {
+		font-size: 4rem;
+	}
+
+	.text-hero h3 {
+		font-size: 1.2rem;
+		letter-spacing: 10px;
+		text-align: center;
+	}
+	.contact-text p {
+		line-height: 1.5;
+	}
+
+	form button {
+		border: none;
+		background-color: #1d2939;
+		color: #fff;
+		text-transform: uppercase;
+		width: 100%;
+		padding: 1.2rem 0;
+		cursor: pointer;
+		font-size: 1.6rem;
+		font-weight: 500;
+		letter-spacing: 1px;
+	}
+	textarea {
+		height: 8em;
+	}
+}
