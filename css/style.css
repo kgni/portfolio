@@ -63,8 +63,8 @@ a:visited {
 .main-nav {
 	height: 10vh;
 	padding-top: 6rem;
-	margin-right: 12rem;
-	margin-left: 6rem;
+	padding-right: 12rem;
+	padding-left: 6rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
