@@ -121,8 +121,7 @@ a:visited {
 	align-items: center;
 	flex-direction: column;
 	gap: 3.6rem;
-	padding-top: 16rem;
-	height: 50vh;
+	height: 90vh;
 }
 
 .text-hero h1 {
@@ -143,19 +142,18 @@ a:visited {
 	margin-right: -20px;
 	display: flex;
 	justify-content: center;
+	margin-bottom: 27rem;
 }
 
 /* social media */
 
 .social-media {
-	height: 40vh;
 	font-size: 2.4rem;
 	display: flex;
 	gap: 2.4rem;
 	justify-content: center;
-	align-items: flex-end;
-	margin-top: auto;
-	padding-bottom: 4.8rem;
+	align-items: end;
+	justify-self: flex-end;
 }
 
 .social-media a:link {
