@@ -13,8 +13,6 @@ body {
 	font-family: 'Inter', sans-serif;
 	color: #1d2939;
 	overflow-x: hidden;
-	min-height: 100%;
-	min-height: -webkit-fill-available;
 }
 
 /* GENERAL STYLES */
@@ -54,8 +52,8 @@ a:visited {
 
 .hero {
 	background-color: #f4ead7;
-	height: 100%;
-	min-height: -webkit-fill-available;
+	height: 100vh;
+	height: -webkit-fill-available;
 }
 
 /* nav */
@@ -179,6 +177,7 @@ a:visited {
 
 .section-projects {
 	height: 100vh;
+	height: -webkit-fill-available;
 }
 
 .title {
@@ -195,6 +194,7 @@ a:visited {
 
 .section-contact {
 	height: 100vh;
+	height: -webkit-fill-available;
 	background-color: #d7f1cb;
 }
 
