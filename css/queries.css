@@ -250,6 +250,10 @@
 	.page-number {
 		font-size: 1.2rem;
 	}
+
+	.text-hero {
+		padding: 2.4rem;
+	}
 	.text-hero h1 {
 		font-size: 12rem;
 		text-align: center;
