@@ -284,3 +284,23 @@
 		height: 8em;
 	}
 }
+
+@media (max-width: 330px) {
+	.title {
+		font-size: 4.8rem;
+		align-items: start;
+	}
+
+	.text-hero h1 {
+		font-size: 8rem;
+		text-align: center;
+	}
+
+	.small-title {
+		font-size: 3.2rem;
+	}
+
+	.main-nav ul {
+		gap: 3rem;
+	}
+}
