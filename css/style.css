@@ -12,8 +12,6 @@ body {
 	font-family: 'Inter', sans-serif;
 	color: #1d2939;
 	overflow-x: hidden;
-	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-	height: calc(var(--vh, 1vh) * 100);
 }
 
 /* GENERAL STYLES */
@@ -43,6 +41,8 @@ a:visited {
 	}
 }
 
+/* SNAP SCROLL */
+
 .hero,
 .section-projects,
 .section-contact {
@@ -53,13 +53,13 @@ a:visited {
 
 .hero {
 	background-color: #f4ead7;
-	height: 100vh;
+	min-height: 100%;
+	position: relative;
 }
 
 /* nav */
 
 .main-nav {
-	height: 10vh;
 	padding-top: 6rem;
 	padding-right: 12rem;
 	padding-left: 6rem;
@@ -69,8 +69,13 @@ a:visited {
 }
 
 .page-number {
-	font-size: 4rem;
+	font-size: 2rem;
 	font-weight: 700;
+}
+
+.page-number span {
+	font-size: 1.4rem;
+	color: rgba(34, 49, 68, 0.205);
 }
 
 .main-nav ul {
@@ -119,15 +124,14 @@ a:visited {
 	align-items: center;
 	flex-direction: column;
 	padding-top: 14rem;
-	gap: 3.6rem;
-	height: 90vh;
 }
 
 .text-hero h1 {
-	font-size: 20rem;
+	font-size: clamp(3.2rem, 4rem + 10vw, 30rem);
 	text-transform: uppercase;
 	font-weight: 900;
 	line-height: 0.9;
+	margin-bottom: 1.8rem;
 }
 
 .text-hero span {
@@ -141,7 +145,7 @@ a:visited {
 	margin-right: -20px;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 15rem;
+	/* margin-bottom: 15rem; */
 }
 
 /* social media */
@@ -150,9 +154,8 @@ a:visited {
 	font-size: 2.4rem;
 	display: flex;
 	gap: 2.4rem;
-	justify-content: center;
-	align-items: end;
-	justify-self: flex-end;
+	position: absolute;
+	bottom: 5%;
 }
 
 .social-media a:link {
@@ -175,28 +178,26 @@ a:visited {
 }
 
 .section-projects {
-	height: 100vh;
+	min-height: 100%;
+	position: relative;
 }
 
 .title {
 	display: flex;
 	flex-direction: column;
 	gap: 1.2rem;
-	padding-top: 4.8rem;
+	padding-top: 2.4rem;
 	font-weight: 900;
 	font-size: 8rem;
-	margin-bottom: 4.8rem;
+	margin-bottom: 2.4rem;
 }
 
 /* CONTACT */
 
 .section-contact {
-	height: 100vh;
+	min-height: 100vh;
 	background-color: #d7f1cb;
-}
-
-.contact-container {
-	height: 90vh;
+	position: relative;
 }
 
 .contact-content {
@@ -217,7 +218,6 @@ a:visited {
 } */
 
 .contact-title {
-	height: 20%;
 	display: flex;
 	justify-content: end;
 	flex-direction: column;
@@ -300,6 +300,7 @@ textarea {
 	width: 100%;
 	text-align: left;
 	margin-bottom: 1.2rem;
+	height: 20em;
 	resize: none;
 	border: none;
 	font-family: 'Inter', sans-serif;
