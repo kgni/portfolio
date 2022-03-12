@@ -44,6 +44,9 @@
 	.main-nav {
 		padding-right: 6rem;
 	}
+	.text-hero {
+		padding-top: 10rem;
+	}
 }
 
 @media (max-width: 800px) {
@@ -98,6 +101,10 @@
 	.contact-text {
 		margin-bottom: 2.4rem;
 	}
+
+	.text-hero {
+		padding-top: 8rem;
+	}
 }
 
 @media (max-width: 540px) {
@@ -133,6 +140,9 @@
 	.contact-social-media {
 		justify-content: center;
 	}
+	.text-hero {
+		padding-top: 8rem;
+	}
 }
 
 @media (max-width: 440px) {
@@ -154,5 +164,9 @@
 
 	.page-number {
 		display: none;
+	}
+
+	.text-hero {
+		padding-top: 6rem;
 	}
 }
