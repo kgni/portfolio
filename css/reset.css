@@ -142,12 +142,14 @@ table {
 	padding: 0;
 }
 html {
+	height: -webkit-fill-available;
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
 body {
-	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-	height: calc(var(--vh, 1vh) * 100);
+	min-height: 100vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 }
