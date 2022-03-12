@@ -53,7 +53,7 @@ a:visited {
 
 .hero {
 	background-color: #f4ead7;
-	min-height: 100%;
+	min-height: 100vh;
 	position: relative;
 }
 
@@ -144,7 +144,6 @@ a:visited {
 	margin-right: -20px;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 15rem;
 }
 
 /* social media */
