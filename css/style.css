@@ -183,6 +183,7 @@ a:visited {
 
 .section-projects {
 	min-height: 100vh;
+	min-height: -webkit-fill-available;
 	position: relative;
 }
 
@@ -200,6 +201,7 @@ a:visited {
 
 .section-contact {
 	min-height: 100vh;
+	min-height: -webkit-fill-available;
 	background-color: #d7f1cb;
 	position: relative;
 }
