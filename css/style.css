@@ -198,6 +198,10 @@ a:visited {
 	position: relative;
 }
 
+.contact-container {
+	padding-bottom: 3.6rem;
+}
+
 .contact-content {
 	display: flex;
 	gap: 6.8rem;
