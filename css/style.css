@@ -54,7 +54,7 @@ a:visited {
 .hero {
 	background-color: #f4ead7;
 	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-	height: calc(var(--vh, 1vh) * 100);
+	/* height: calc(var(--vh, 1vh) * 100); */
 	position: relative;
 	display: flex;
 	flex-direction: column;
