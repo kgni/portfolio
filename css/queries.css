@@ -1,4 +1,15 @@
 @media (max-width: 1200px) {
+	body {
+		overflow-x: hidden;
+		scroll-snap-type: unset;
+		overflow-y: unset;
+	}
+
+	.hero,
+	.section-projects,
+	.section-contact {
+		scroll-snap-align: unset;
+	}
 	.text-hero h1 {
 		font-size: 18rem;
 	}
