@@ -6,12 +6,21 @@
 
 html {
 	font-size: 62.5%;
+	scroll-snap-type: y mandatory;
 }
 
 body {
 	font-family: 'Inter', sans-serif;
 	color: #1d2939;
 	overflow-x: hidden;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+
+.hero,
+.section-projects,
+.section-contact {
+	scroll-snap-align: start;
 }
 
 /* GENERAL STYLES */
