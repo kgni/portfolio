@@ -25,6 +25,21 @@
 		font-size: 2rem;
 	}
 
+	.projects-container {
+		gap: 1.2rem;
+	}
+
+	.project-card h3 {
+		font-size: 1.8rem;
+		font-weight: 700;
+		margin-bottom: 0.6rem;
+	}
+
+	.project-card p {
+		font-size: 1.4rem;
+		margin-bottom: 2.4rem;
+	}
+
 	.contact-title {
 		display: flex;
 		justify-content: end;
@@ -58,6 +73,10 @@
 	.text-hero {
 		padding-top: 10rem;
 	}
+
+	.projects-container {
+		width: 85%;
+	}
 }
 
 @media (max-width: 800px) {
@@ -77,6 +96,10 @@
 		justify-content: flex-end;
 		padding: 6rem 6rem 0 6rem;
 	}
+
+	.section-projects {
+		padding-bottom: 3rem;
+	}
 	.page-number {
 		position: absolute;
 		left: 2.5%;
@@ -95,6 +118,21 @@
 		/* text-align: center; */
 		font-size: 5.4rem;
 		margin-bottom: 2.4rem;
+	}
+
+	.projects-container {
+		flex-direction: column;
+		align-items: center;
+		gap: 2.4rem;
+	}
+
+	.project-card {
+		width: 100%;
+	}
+
+	.project-card-text {
+		display: inline-block;
+		padding-bottom: 2.4rem;
 	}
 
 	.contact-content {
