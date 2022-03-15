@@ -1,7 +1,7 @@
 // Using ES6 feature.
 let redirect_Page = () => {
 	let tID = setTimeout(function () {
-		window.location.href = 'https://mdiadk.netlify.app/';
+		window.location.href = 'https://mdia.dk';
 		window.clearTimeout(tID); // clear time out.
 	}, 5000);
 };
