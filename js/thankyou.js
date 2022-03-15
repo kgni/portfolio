@@ -3,7 +3,7 @@ let redirect_Page = () => {
 	let tID = setTimeout(function () {
 		window.location.href = 'https://mdia.dk';
 		window.clearTimeout(tID); // clear time out.
-	}, 5000);
+	}, 3500);
 };
 
 redirect_Page();
