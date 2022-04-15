@@ -1,4 +1,5 @@
 # My own portfolio - mdia.dk
+![portfolio](/img/MDIA.png)
 
 ## Made with
 - HTML
