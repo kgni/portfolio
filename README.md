@@ -1,4 +1,4 @@
-# Portfolio - mdia.dk
+# My own portfolio - mdia.dk
 
 ## Made with
 - HTML
