@@ -1,3 +1,5 @@
+/* TODO - Fix cards on all devices, they are too high - should only be the height of the heighest container - too much whitespace atm */
+
 @media (max-width: 1210px) {
 	.about-container img {
 		width: 300px;
