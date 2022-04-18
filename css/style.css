@@ -18,6 +18,7 @@ body {
 }
 
 .hero,
+.section-about,
 .section-projects,
 .section-contact {
 	scroll-snap-align: start;
@@ -182,6 +183,15 @@ a:visited {
 /* .social-media a:active {
 	transform: scale(0.9);
 } */
+
+/* ABOUT */
+
+.section-about {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+	position: relative;
+	background-color: #dfd7f4;
+}
 
 /* PROJECTS */
 
