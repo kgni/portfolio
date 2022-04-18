@@ -193,6 +193,49 @@ a:visited {
 	background-color: #dfd7f4;
 }
 
+.about-container {
+	width: 70%;
+	margin: 0 auto;
+	display: grid;
+	column-gap: 9.6rem;
+	grid-template-columns: 400px 2fr;
+	align-items: center;
+}
+
+.about-container img {
+	border-radius: 50%;
+	width: 400px;
+}
+
+.about-text a:link,
+.about-text a:visited {
+	font-size: 2.4rem;
+	text-decoration: underline;
+	transition: 200ms ease;
+}
+
+.about-text a:hover,
+.about-text a:active {
+	color: rgba(29, 41, 57, 0.25);
+}
+
+.about-text h2 {
+	font-size: 3.6rem;
+	line-height: 2;
+	font-weight: bold;
+	width: 95%;
+	color: #292e35;
+	margin-bottom: 1.4rem;
+}
+
+.about-text p {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	width: 95%;
+	color: #292e35;
+	margin-bottom: 1.4rem;
+}
+
 /* PROJECTS */
 
 .page-number-2 {
