@@ -198,7 +198,7 @@ a:visited {
 	margin: 0 auto;
 	display: grid;
 	column-gap: 9.6rem;
-	grid-template-columns: 400px 2fr;
+	grid-template-columns: 400px 1fr;
 	align-items: center;
 }
 
@@ -219,6 +219,10 @@ a:visited {
 	color: rgba(29, 41, 57, 0.25);
 }
 
+.about-h2-mobile {
+	display: none;
+}
+
 .about-text h2 {
 	font-size: 3.6rem;
 	line-height: 2;
@@ -226,12 +230,12 @@ a:visited {
 	width: 95%;
 	color: #292e35;
 	margin-bottom: 1.4rem;
+	letter-spacing: 2px;
 }
 
 .about-text p {
 	font-size: 1.8rem;
 	line-height: 1.5;
-	width: 95%;
 	color: #292e35;
 	margin-bottom: 1.4rem;
 }
