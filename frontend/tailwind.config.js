@@ -12,6 +12,14 @@ module.exports = {
 			},
 
 			screens: {},
+
+			letterSpacing: {
+				widest: '.80em',
+			},
+
+			fontSize: {
+				homepage: ['15rem', 0.9],
+			},
 		},
 	},
 	plugins: [],

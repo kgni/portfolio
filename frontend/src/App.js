@@ -5,7 +5,7 @@ import Contact from './components/pages/Contact';
 
 function App() {
 	return (
-		<div className="snap-y snap-mandatory w-screen">
+		<div className="snap-y snap-mandatory">
 			<Home />
 			<About />
 			<Projects />
