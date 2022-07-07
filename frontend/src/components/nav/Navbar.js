@@ -7,7 +7,7 @@ const Navbar = ({ currentPage, page }) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	function checkIfScrolled() {
-		if (window.scrollY >= 100) {
+		if (window.scrollY >= 400) {
 			setIsScrolled(true);
 		} else {
 			setIsScrolled(false);

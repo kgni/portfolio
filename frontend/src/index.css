@@ -9,10 +9,14 @@
 
 .skills img {
 	width: 3rem;
+}
+.skills img,
+.skills svg {
 	cursor: pointer;
 	transition: 200ms;
 }
 
-.skills img:hover {
+.skills img:hover,
+.skills svg:hover {
 	transform: translateY(-10px);
 }
