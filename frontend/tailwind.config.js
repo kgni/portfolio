@@ -10,6 +10,8 @@ module.exports = {
 				'light-green': '#d7f1cb',
 				offwhite: '#F7F7F7',
 			},
+
+			screens: {},
 		},
 	},
 	plugins: [],

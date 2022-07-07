@@ -1,7 +1,13 @@
 import React from 'react';
+import Page from '../UI/Page';
+import Navbar from '../nav/Navbar';
 
 const Home = () => {
-	return <div className="h-screen bg-beige">Hello</div>;
+	return (
+		<Page id="home" styles="bg-beige text-primary">
+			<Navbar currentPage="1" page="home" />
+		</Page>
+	);
 };
 
 export default Home;
