@@ -1,6 +1,8 @@
 import React from 'react';
 import Page from '../UI/Page';
 import Navbar from '../nav/Navbar';
+import { FaGithub, FaLinkedin, FaMailBulk, FaTwitter } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const Home = () => {
 	return (
@@ -11,18 +13,26 @@ const Home = () => {
 					<span className="block">WEB</span> DEVELOPER
 				</h1>
 				<h2 className="text-center tracking-widest">KARL NIELSEN</h2>
-				<ul className="flex gap-4 mt-auto">
+				<ul className="flex gap-8 mt-auto text-2xl">
 					<li>
-						<a href="">twitter</a>
+						<a href="">
+							<FaTwitter />
+						</a>
 					</li>
 					<li>
-						<a href="">linkedin</a>
+						<a href="">
+							<FaLinkedin />
+						</a>
 					</li>
 					<li>
-						<a href="">github</a>
+						<a href="">
+							<FaGithub />
+						</a>
 					</li>
 					<li>
-						<a href="">mail</a>
+						<a href="">
+							<MdEmail />
+						</a>
 					</li>
 				</ul>
 			</div>
