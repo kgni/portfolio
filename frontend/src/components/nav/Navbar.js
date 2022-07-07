@@ -22,7 +22,7 @@ const Navbar = ({ currentPage, page }) => {
 			}`}
 		>
 			<nav
-				className={`w-10/12 m-auto flex bg-transparent justify-between items-center font-bold z-[999]`}
+				className={`w-9/12 m-auto flex bg-transparent justify-between items-center font-bold z-[999]`}
 			>
 				<Link smooth={true} duration={500} to="home" className="cursor-pointer">
 					mdia.
