@@ -1,8 +1,7 @@
 import React from 'react';
 import Page from '../UI/Page';
 import Navbar from '../nav/Navbar';
-import ParticlesBackground from '../Particles';
-import { FaGithub, FaLinkedin, FaMailBulk, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const Home = () => {
@@ -14,6 +13,7 @@ const Home = () => {
 					<h1 className="text-homepage font-black mb-7 mt-auto">
 						<span className="block">WEB</span> DEVELOPER
 					</h1>
+
 					<h2 className="text-center tracking-widest">KARL NIELSEN</h2>
 					<ul className="flex gap-8 mt-auto text-2xl">
 						<li>
