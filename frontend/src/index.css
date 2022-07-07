@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar-scrolled {
+	background-color: #1d2939;
+	color: #f7f7f7;
+}
+
+.skills img {
+	width: 3rem;
+	cursor: pointer;
+	transition: 200ms;
+}
+
+.skills img:hover {
+	transform: translateY(-10px);
+}

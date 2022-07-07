@@ -20,6 +20,16 @@ module.exports = {
 			fontSize: {
 				homepage: ['15rem', 0.9],
 			},
+
+			keyframes: {
+				moveUp: {
+					'0%, 100%': { transform: 'translateY(-10px)' },
+				},
+			},
+
+			animation: {
+				moveUp: 'moveUp 1s ease-in-out',
+			},
 		},
 	},
 	plugins: [],

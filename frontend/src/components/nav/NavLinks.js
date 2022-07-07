@@ -1,11 +1,16 @@
 import React from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
-const NavLinks = ({ page }) => {
+const NavLinks = ({ page, isScrolled }) => {
 	return (
-		<ul className="flex gap-12 text-xl">
+		<ul
+			className={`flex font-semibold items-center text-xl duration-150 ${
+				isScrolled ? 'text-sm gap-6' : 'text-xl gap-8'
+			}`}
+		>
 			{' '}
-			<li
+			{/* <li
 				className={`cursor-pointer duration-150 ${
 					page === 'home' ? 'opacity-100' : 'opacity-20'
 				} hover:opacity-100`}
@@ -13,10 +18,10 @@ const NavLinks = ({ page }) => {
 				<Link smooth={true} duration={500} to="home">
 					home
 				</Link>
-			</li>
+			</li> */}
 			<li
-				className={`cursor-pointer duration-150 ${
-					page === 'about' ? 'opacity-100' : 'opacity-20'
+				className={`cursor-pointer ${
+					page === 'about' ? 'opacity-100' : 'opacity-100'
 				} hover:opacity-100`}
 			>
 				<Link smooth={true} duration={500} to="about">
@@ -24,8 +29,8 @@ const NavLinks = ({ page }) => {
 				</Link>
 			</li>
 			<li
-				className={`cursor-pointer duration-150 ${
-					page === 'projects' ? 'opacity-100' : 'opacity-20'
+				className={`cursor-pointer ${
+					page === 'projects' ? 'opacity-100' : 'opacity-100'
 				} hover:opacity-100`}
 			>
 				<Link smooth={true} duration={500} to="projects">
@@ -33,13 +38,29 @@ const NavLinks = ({ page }) => {
 				</Link>
 			</li>
 			<li
-				className={`cursor-pointer duration-150 ${
-					page === 'contact' ? 'opacity-100' : 'opacity-20'
+				className={`cursor-pointer ${
+					page === 'contact' ? 'opacity-100' : 'opacity-'
 				} hover:opacity-100`}
 			>
 				<Link smooth={true} duration={500} to="contact">
 					contact
 				</Link>
+			</li>
+			<li className="flex items-center gap-2 text-2xl">
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.linkedin.com/in/kgni/"
+				>
+					<FaLinkedin />
+				</a>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://github.com/kgni"
+				>
+					<FaGithub />
+				</a>
 			</li>
 		</ul>
 	);
