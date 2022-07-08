@@ -1,20 +1,25 @@
 import React from 'react';
 import Page from '../UI/Page';
 import pbImage from '../../assets/img/pb-offwhite-bg.jpg';
-import Particle from '../Particle';
+import ParticlesAbout from '../ParticlesAbout';
+import { motion } from 'framer-motion';
 
 const About = () => {
 	return (
 		<>
-			<Page id="about" styles="bg-primary">
-				{/* <Particle /> */}
+			<ParticlesAbout />
+			<Page id="about" styles="">
 				{/* <Navbar currentPage="2" page="about" /> */}
 				<div className="h-full flex flex-col justify-center text-offwhite">
 					<div className="flex mb-14 gap-8 items-center">
 						<h2 className="text-8xl font-bold">ABOUT</h2>
-						<img className="rounded-full w-24" src={pbImage} alt="" />
+						<motion.img
+							className="rounded-full w-24 cursor-pointer"
+							src={pbImage}
+							alt=""
+						/>
 					</div>
-					<div className="leading-8 w-2/5 text-xl">
+					<div className="leading-8 w-3/6 text-xl">
 						<div className="mb-14">
 							<h3 className="text-4xl font-semibold mb-6">Hi, I'm Karl!</h3>
 							<p className="mb-2">
@@ -34,7 +39,13 @@ const About = () => {
 						</div>
 						<div className="skills">
 							<h3 className="text-xl font-bold uppercase mb-1">Skills</h3>
-							<div className="bg-offwhite w-full h-1 mb-4"></div>
+							<motion.div
+								initial={{ width: '0%' }}
+								whileInView={{ width: '100%' }}
+								transition={{ bounce: 0, type: 'spring', duration: 1.2 }}
+								viewport={{ once: true }}
+								className="bg-offwhite w-full h-1 mb-4"
+							></motion.div>
 							<div className="grid grid-cols-6 items-center place-items-center gap-x-8 gap-y-4 ">
 								{/* HTML */}
 

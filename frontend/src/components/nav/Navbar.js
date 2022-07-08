@@ -2,6 +2,7 @@ import React from 'react';
 import NavLinks from './NavLinks';
 import { Link } from 'react-scroll';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Navbar = ({ currentPage, page }) => {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -18,10 +19,13 @@ const Navbar = ({ currentPage, page }) => {
 	return (
 		<header
 			className={`flex fixed w-full duration-200 ${
-				isScrolled ? 'navbar-scrolled h-16' : 'h-20'
+				isScrolled ? 'navbar-scrolled h-16' : 'h-20 text-primary'
 			}`}
 		>
-			<nav
+			<motion.nav
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 2, default: { duration: 1.5 } }}
 				className={`w-9/12 m-auto flex bg-transparent justify-between items-center font-bold z-[999]`}
 			>
 				<Link smooth={true} duration={500} to="home" className="cursor-pointer">
@@ -29,7 +33,7 @@ const Navbar = ({ currentPage, page }) => {
 				</Link>
 				{/* <PageCount currentPage={currentPage} /> */}
 				<NavLinks isScrolled={isScrolled} page={page} />
-			</nav>
+			</motion.nav>
 		</header>
 	);
 };

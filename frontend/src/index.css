@@ -20,3 +20,16 @@
 .skills svg:hover {
 	transform: translateY(-10px);
 }
+/* 
+#about {
+	position: relative;
+} */
+
+canvas {
+	position: absolute;
+	z-index: -1;
+	background-color: #1d2939;
+}
+
+#tsparticles {
+}

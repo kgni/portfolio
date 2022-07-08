@@ -1,88 +1,113 @@
 const particlesConfig = {
-	fullScreen: {
-		enable: false,
-		zIndex: 0,
-	},
 	particles: {
-		color: {
-			value: '#ff0000',
-			animation: {
-				enable: true,
-				speed: 20,
-				sync: true,
-			},
-		},
-		lineLinked: {
-			blink: false,
-			color: 'random',
-			consent: false,
-			distance: 30,
-			enable: true,
-			opacity: 0.3,
-			width: 0.5,
-		},
-		move: {
-			attract: {
-				enable: false,
-				rotate: {
-					x: 600,
-					y: 1200,
-				},
-			},
-			bounce: false,
-			direction: 'none',
-			enable: true,
-			outMode: 'bounce',
-			random: true,
-			speed: 0.5,
-			straight: false,
-		},
 		number: {
+			value: 11,
 			density: {
-				enable: false,
-				area: 2000,
-			},
-			limit: 0,
-			value: 200,
-		},
-		opacity: {
-			animation: {
 				enable: true,
-				minimumValue: 0.05,
-				speed: 2,
-				sync: false,
+				value_area: 800,
 			},
-			random: false,
-			value: 1,
+		},
+		color: {
+			value: '#5e81af',
 		},
 		shape: {
 			type: 'circle',
+			stroke: {
+				width: 0,
+				color: '#000000',
+			},
+			polygon: {
+				nb_sides: 5,
+			},
+			image: {
+				src: 'img/github.svg',
+				width: 100,
+				height: 100,
+			},
 		},
-		size: {
-			animation: {
+		opacity: {
+			value: 1,
+			random: false,
+			anim: {
 				enable: false,
-				minimumValue: 0.1,
-				speed: 40,
+				speed: 1,
+				opacity_min: 0,
 				sync: false,
 			},
-			random: true,
-			value: 1,
 		},
-	},
-	polygon: {
-		draw: {
-			enable: true,
-			lineColor: 'rgba(255,255,255,0.2)',
-			lineWidth: 0.3,
+		size: {
+			value: 5.891476416322726,
+			random: true,
+			anim: {
+				enable: false,
+				speed: 4,
+				size_min: 0.6,
+				sync: false,
+			},
+		},
+		line_linked: {
+			enable: false,
+			distance: 150,
+			color: '#ffffff',
+			opacity: 1,
+			width: 1,
 		},
 		move: {
-			radius: 10,
+			enable: true,
+			speed: 1,
+			direction: 'none',
+			random: true,
+			straight: false,
+			out_mode: 'out',
+			bounce: false,
+			attract: {
+				enable: false,
+				rotateX: 600,
+				rotateY: 600,
+			},
 		},
-		inlineArrangement: 'equidistant',
-		scale: 0.5,
-		type: 'inline',
-		url: 'https://particles.js.org/images/smalldeer.svg',
 	},
+	interactivity: {
+		detect_on: 'canvas',
+		events: {
+			onhover: {
+				enable: true,
+				mode: 'bubble',
+			},
+			onclick: {
+				enable: true,
+				mode: 'repulse',
+			},
+			resize: true,
+		},
+		modes: {
+			grab: {
+				distance: 400,
+				line_linked: {
+					opacity: 1,
+				},
+			},
+			bubble: {
+				distance: 250,
+				size: 0,
+				duration: 2,
+				opacity: 0,
+				speed: 3,
+			},
+			repulse: {
+				distance: 400,
+				duration: 0.4,
+			},
+			push: {
+				particles_nb: 4,
+			},
+			remove: {
+				particles_nb: 2,
+			},
+		},
+	},
+	retina_detect: true,
+	fullScreen: { enable: false },
 };
 
 export default particlesConfig;

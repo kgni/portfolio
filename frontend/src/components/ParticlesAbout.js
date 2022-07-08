@@ -3,7 +3,7 @@ import { loadFull } from 'tsparticles';
 import React from 'react';
 import particlesConfig from './config/particles-config';
 
-const Particle = () => {
+const ParticlesAbout = () => {
 	const particlesInit = async (main) => {
 		console.log(main);
 
@@ -26,4 +26,4 @@ const Particle = () => {
 	);
 };
 
-export default Particle;
+export default ParticlesAbout;

@@ -7,7 +7,7 @@ import Navbar from './components/nav/Navbar';
 function App() {
 	return (
 		<>
-			<div className="snap-y snap-mandatory">
+			<div className="snap-y snap-mandatory overflow-x-hidden">
 				<Navbar />
 				<Home />
 				<About />

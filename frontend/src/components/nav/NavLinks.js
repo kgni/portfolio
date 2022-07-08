@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const NavLinks = ({ page, isScrolled }) => {
 	return (
@@ -19,7 +20,7 @@ const NavLinks = ({ page, isScrolled }) => {
 					home
 				</Link>
 			</li> */}
-			<li
+			<motion.li
 				className={`cursor-pointer ${
 					page === 'about' ? 'opacity-100' : 'opacity-100'
 				} hover:opacity-100`}
@@ -27,8 +28,8 @@ const NavLinks = ({ page, isScrolled }) => {
 				<Link smooth={true} duration={500} to="about">
 					about
 				</Link>
-			</li>
-			<li
+			</motion.li>
+			<motion.li
 				className={`cursor-pointer ${
 					page === 'projects' ? 'opacity-100' : 'opacity-100'
 				} hover:opacity-100`}
@@ -36,8 +37,8 @@ const NavLinks = ({ page, isScrolled }) => {
 				<Link smooth={true} duration={500} to="projects">
 					projects
 				</Link>
-			</li>
-			<li
+			</motion.li>
+			<motion.li
 				className={`cursor-pointer ${
 					page === 'contact' ? 'opacity-100' : 'opacity-'
 				} hover:opacity-100`}
@@ -45,7 +46,7 @@ const NavLinks = ({ page, isScrolled }) => {
 				<Link smooth={true} duration={500} to="contact">
 					contact
 				</Link>
-			</li>
+			</motion.li>
 			<li className="flex items-center gap-2 text-2xl">
 				<a
 					target="_blank"
