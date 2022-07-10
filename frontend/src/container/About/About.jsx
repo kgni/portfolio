@@ -14,12 +14,23 @@ const About = () => {
 				<motion.img
 					initial={{ x: -100, y: 60 }}
 					animate={{ x: -200, y: 160 }}
+					drag
+					dragConstraints={{
+						top: 0,
+						bottom: 200,
+						left: -300,
+						right: 100,
+					}}
+					momentumOptions={{
+						friction: 10,
+						tolerance: 0.1,
+					}}
 					transition={{
 						duration: 20,
 						repeat: Infinity,
 						repeatType: 'reverse',
 					}}
-					className="absolute right-40 w-96"
+					className="absolute right-40 w-96 cursor-grab active:cursor-grabbing"
 					src={images.astronaut}
 					alt=""
 				/>

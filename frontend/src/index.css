@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	overflow-x: hidden;
+}
+
 .navbar-scrolled {
 	background-color: #1d2939;
 	color: #f7f7f7;
