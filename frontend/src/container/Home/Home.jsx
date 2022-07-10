@@ -1,5 +1,5 @@
 import React from 'react';
-import Page from '../UI/Page';
+import Page from '../Page';
 import { motion } from 'framer-motion';
 
 const Home = () => {

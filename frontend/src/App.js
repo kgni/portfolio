@@ -1,8 +1,9 @@
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Projects from './components/pages/Projects';
-import Contact from './components/pages/Contact';
-import Navbar from './components/nav/Navbar';
+import Home from './container/Home/Home';
+import About from './container/About/About';
+import Projects from './container/Projects/Projects';
+import Contact from './container/Contact/Contact';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './container/Footer/Footer';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				<About />
 				<Projects />
 				<Contact />
+				<Footer />
 			</div>
 		</>
 	);

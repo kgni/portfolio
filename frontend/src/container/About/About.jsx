@@ -1,8 +1,7 @@
 import React from 'react';
-import Page from '../UI/Page';
-import pbImage from '../../assets/img/pb-offwhite-bg.jpg';
-import astronaut from '../../assets/img/astronaut.png';
-import ParticlesAbout from '../ParticlesAbout';
+import Page from '../Page';
+import { images } from '../../constants';
+import ParticlesAbout from '../../components/ParticlesAbout';
 import { motion } from 'framer-motion';
 // TODO: Make astronaut image float more randomly with framer motion!
 const About = () => {
@@ -21,18 +20,18 @@ const About = () => {
 						repeatType: 'reverse',
 					}}
 					className="absolute right-40 w-96"
-					src={astronaut}
+					src={images.astronaut}
 					alt=""
 				/>
 
 				<div className="h-full flex flex-col justify-center text-offwhite">
 					<div className="flex mb-14 gap-8 items-center">
 						<h2 className="text-8xl font-bold">ABOUT</h2>
-						{/* <motion.img
+						<motion.img
 							className="rounded-full w-24 cursor-pointer"
-							src={pbImage}
+							src={images.pbImage}
 							alt=""
-						/> */}
+						/>
 					</div>
 					<div className="leading-8 w-3/6 text-xl">
 						<div className="mb-14">
