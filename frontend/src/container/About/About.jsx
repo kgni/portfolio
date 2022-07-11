@@ -3,7 +3,7 @@ import Page from '../Page';
 import { images } from '../../constants';
 import ParticlesAbout from '../../components/ParticlesAbout';
 import { motion } from 'framer-motion';
-// TODO: Make astronaut image float more randomly with framer motion!
+// TODO: Make astronaut image float more randomly with framer motion, right now it is just floating diagonally
 const About = () => {
 	return (
 		<>
