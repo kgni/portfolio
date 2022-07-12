@@ -34,7 +34,7 @@ const About = () => {
 					src={images.astronaut}
 					alt=""
 				/>
-				<div className="flex gap-8 items-center mb-12">
+				<div className="flex gap-8 items-center mb-16">
 					<h2 className="text-8xl font-bold text-offwhite">ABOUT</h2>
 					<motion.img
 						className="rounded-full w-24 cursor-pointer"

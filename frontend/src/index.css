@@ -88,3 +88,21 @@ canvas {
 		box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 	}
 }
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #f7f7f7;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #1d2939;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(29, 17, 138, 0.6);
+}

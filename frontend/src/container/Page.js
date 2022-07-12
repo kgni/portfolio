@@ -4,7 +4,7 @@ const Page = ({ children, styles, id }) => {
 		<>
 			<section
 				id={id}
-				className={`snap-start h-screen ${
+				className={`snap-start h-screen section ${
 					id === 'home' ? 'pt-16 pb-24' : 'pt-28 pb-24'
 				} ${styles}`}
 			>
