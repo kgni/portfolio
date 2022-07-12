@@ -34,16 +34,15 @@ const About = () => {
 					src={images.astronaut}
 					alt=""
 				/>
-
-				<div className="h-full flex flex-col justify-center text-offwhite">
-					<div className="flex mb-14 gap-8 items-center">
-						<h2 className="text-8xl font-bold">ABOUT</h2>
-						<motion.img
-							className="rounded-full w-24 cursor-pointer"
-							src={images.pbImage}
-							alt=""
-						/>
-					</div>
+				<div className="flex gap-8 items-center mb-12">
+					<h2 className="text-8xl font-bold text-offwhite">ABOUT</h2>
+					<motion.img
+						className="rounded-full w-24 cursor-pointer"
+						src={images.pbImage}
+						alt=""
+					/>
+				</div>
+				<div className="h-full flex flex-col text-offwhite">
 					<div className="leading-8 w-3/6 text-xl">
 						<div className="mb-14">
 							<h3 className="text-4xl font-semibold mb-6">Hi, I'm Karl!</h3>
