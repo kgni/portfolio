@@ -32,6 +32,28 @@ export default {
 				hotspot: true,
 			},
 		},
+		{
+			name: 'technologies',
+			title: 'Technologies',
+			type: 'array',
+			of: [{ type: 'string' }],
+			options: {
+				list: [
+					{ title: 'HTML', value: 'html' },
+					{ title: 'CSS', value: 'css' },
+					{ title: 'JavaScript', value: 'JavaScript' },
+					{ title: 'React', value: 'react' },
+					{ title: 'Sass', value: 'sass' },
+					{ title: 'TailwindCSS', value: 'tailwindcss' },
+					{ title: 'NodeJS', value: 'nodejs' },
+					{ title: 'MongoDB', value: 'mongodb' },
+					{ title: 'Express', value: 'express' },
+					{ title: 'NextJS', value: 'nextjs' },
+					{ title: 'GraphQL', value: 'graphql' },
+					{ title: 'Jest', value: 'jest' },
+				],
+			},
+		},
 
 		{
 			name: 'tags',

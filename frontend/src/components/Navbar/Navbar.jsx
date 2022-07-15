@@ -24,7 +24,7 @@ const Navbar = ({ currentPage, page }) => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ delay: 2, default: { duration: 1.5 } }}
-			className={`flex fixed w-full duration-200 ${
+			className={`flex fixed w-full duration-200 z-10 ${
 				isScrolled ? 'navbar-scrolled h-16' : 'h-20 text-primary'
 			}`}
 		>

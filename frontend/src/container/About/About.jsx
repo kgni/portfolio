@@ -30,7 +30,7 @@ const About = () => {
 						repeat: Infinity,
 						repeatType: 'reverse',
 					}}
-					className="absolute right-40 w-96 cursor-grab active:cursor-grabbing"
+					className="absolute right-40 w-96 cursor-grab active:cursor-grabbing z-20"
 					src={images.astronaut}
 					alt=""
 				/>
