@@ -87,7 +87,7 @@ const Contact = () => {
 							(e.target.placeholder = 'write your message here...')
 						}
 						placeholder="write your message here..."
-						className="w-full mb-3 p-4"
+						className="w-full mb-3 p-4 h-48"
 					/>
 					<button className="w-full bg-primary text-offwhite font-semibold py-2">
 						SEND
