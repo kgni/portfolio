@@ -89,7 +89,7 @@ const ProjectModal = ({
 							whileHover={{ scale: 1.05 }}
 							className="flex items-center gap-1 ring-2 text-offwhite bg-black ring-black px-4 py-1 rounded"
 							target="_blank"
-							rel="noreferrer"
+							rel="noreferrer noopener"
 							href={project.codeLink}
 						>
 							<AiFillGithub />

@@ -3,6 +3,7 @@ import Page from '../Page';
 import { images } from '../../constants';
 import ParticlesAbout from '../../components/ParticlesAbout';
 import { motion } from 'framer-motion';
+import Flag from 'react-world-flags';
 // TODO: Make astronaut image float more randomly with framer motion, right now it is just floating diagonally
 const About = () => {
 	return (
@@ -47,7 +48,9 @@ const About = () => {
 						<div className="mb-14">
 							<h3 className="text-4xl font-semibold mb-6">Hi, I'm Karl!</h3>
 							<p className="mb-2">
-								Software developer from Denmark, currently living in Spain.
+								Software developer from Denmark{' '}
+								<Flag className="inline w-4" code={'DK'} />, currently living in
+								Spain <Flag className="inline w-4" code={'ES'} />.
 							</p>
 							<p className="mb-2">
 								Creative, detail-oriented, and always ready to learn new skills
