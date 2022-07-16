@@ -4,7 +4,6 @@ import { AiFillGithub, AiOutlineLink, AiOutlineClose } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import { images } from '../../constants';
 
 const ProjectModal = ({
 	isModalShown,

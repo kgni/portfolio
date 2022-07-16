@@ -4,7 +4,6 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import ParticlesAbout from '../ParticlesAbout';
 
 const Navbar = ({ currentPage, page }) => {
 	const [isScrolled, setIsScrolled] = useState(false);

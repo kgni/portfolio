@@ -58,7 +58,12 @@ const About = () => {
 							</p>
 							<p>
 								Feel free to check out my{' '}
-								<a className="text-3xl font-bold underline" href="/">
+								<a
+									className="text-3xl font-bold underline"
+									href="https://docs.google.com/document/d/1exdVLZLkl-n1u9k7C-QoMhjcb2b1MRXT/edit?usp=sharing&ouid=106838936484591987660&rtpof=true&sd=true"
+									target="_blank"
+									rel="noreferrer noopener"
+								>
 									resume
 								</a>
 								, or scroll to the next page for my projects!

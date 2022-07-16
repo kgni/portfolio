@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from '../Page';
+import { ContactForm } from '../../components/ContactForm';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { IconContext } from 'react-icons';
@@ -54,7 +55,7 @@ const Contact = () => {
 						</IconContext.Provider>
 					</div>
 				</div>
-				<form className="w-1/2" action="">
+				<div className="w-1/2">
 					<h3 className="text-3xl tracking-wider mb-1 font-semibold uppercase">
 						I'm open to work!
 					</h3>
@@ -65,34 +66,8 @@ const Contact = () => {
 						viewport={{ once: true }}
 						className="w-full bg-primary h-1 mb-8 "
 					></motion.div>
-					<div className="flex gap-3 mb-3 h-10">
-						<input
-							onFocus={(e) => (e.target.placeholder = '')}
-							onBlur={(e) => (e.target.placeholder = 'name')}
-							placeholder="name"
-							className="w-1/2 p-4"
-							type="text"
-						/>
-						<input
-							onFocus={(e) => (e.target.placeholder = '')}
-							onBlur={(e) => (e.target.placeholder = 'email')}
-							placeholder="email"
-							className="w-1/2 p-4"
-							type="text"
-						/>
-					</div>
-					<textarea
-						onFocus={(e) => (e.target.placeholder = '')}
-						onBlur={(e) =>
-							(e.target.placeholder = 'write your message here...')
-						}
-						placeholder="write your message here..."
-						className="w-full mb-3 p-4 h-48"
-					/>
-					<button className="w-full bg-primary text-offwhite font-semibold py-2">
-						SEND
-					</button>
-				</form>
+					<ContactForm />
+				</div>
 			</div>
 		</Page>
 	);
