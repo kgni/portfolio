@@ -2,6 +2,8 @@ import React from 'react';
 import { urlFor } from '../../client';
 import { AiFillGithub, AiOutlineLink, AiOutlineClose } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 import { images } from '../../constants';
 
 const ProjectModal = ({
@@ -43,7 +45,7 @@ const ProjectModal = ({
 					<h3 className="uppercase text-center font-bold text-4xl mb-4">
 						{project.title}
 					</h3>
-					<p className="mb-12 text-center">{project.description}</p>
+					<p className="mb-6 text-center">{project.description}</p>
 					<div className="technologies mb-12">
 						<h4 className="uppercase font-bold text-center mb-4">
 							Created With
@@ -52,12 +54,20 @@ const ProjectModal = ({
 							{project.technologies.map((technology) => (
 								<>
 									<div className="flex flex-col items-center">
-										<motion.img
-											className="w-12"
-											animate={{ opacity: [0, 1] }}
-											src={`./technologies/${technology}.png`}
-											alt=""
-										/>
+										<Tippy
+											content={technology.toUpperCase()}
+											placement="bottom"
+											theme="material"
+										>
+											<motion.img
+												whileHover={{ scale: 1.05 }}
+												id={technology}
+												className="w-12 cursor-pointer"
+												// animate={{ opacity: [0, 1] }}
+												src={`./technologies/${technology}.png`}
+												alt=""
+											/>
+										</Tippy>
 										{/* <p>{technology}</p> */}
 									</div>
 								</>
@@ -68,6 +78,8 @@ const ProjectModal = ({
 						<motion.a
 							whileHover={{ scale: 1.05 }}
 							className="flex items-center gap-1 ring-2 ring-black px-4 py-1 rounded"
+							target="_blank"
+							rel="noreferrer"
 							href={project.projectLink}
 						>
 							<AiOutlineLink />
@@ -76,6 +88,8 @@ const ProjectModal = ({
 						<motion.a
 							whileHover={{ scale: 1.05 }}
 							className="flex items-center gap-1 ring-2 text-offwhite bg-black ring-black px-4 py-1 rounded"
+							target="_blank"
+							rel="noreferrer"
 							href={project.codeLink}
 						>
 							<AiFillGithub />
