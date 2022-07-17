@@ -1,7 +1,6 @@
 import React from 'react';
 import Page from '../Page';
 import { motion } from 'framer-motion';
-import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Home = () => {
 	return (
@@ -17,7 +16,7 @@ const Home = () => {
 								stiffness: 500,
 								default: { duration: 2 },
 							}}
-							className="block xl:text-[25vw]"
+							className="block xl:text-[22vw]"
 						>
 							WEB
 						</motion.span>

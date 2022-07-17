@@ -35,9 +35,9 @@ const Projects = () => {
 				<div className="h-full  text-primary">
 					<h2 className="text-8xl font-bold mb-16">PROJECTS</h2>
 
-					<motion.div className="projects-container grid grid-cols-4">
+					<motion.div className="projects-container grid grid-cols-4 xl:grid-cols-2 xl:gap-2 lg:grid-cols-1">
 						{projects.map((project, index) => (
-							<motion.div key={index} className="card relative">
+							<motion.div key={index} className="card relative xl:shadow-md">
 								<img src={urlFor(project.imgUrl)} alt={project.title} />
 								<motion.div
 									className="absolute w-full h-full top-0 bg-black/70"
@@ -48,8 +48,8 @@ const Projects = () => {
 										ease: 'easeInOut',
 									}}
 								>
-									<div className="flex flex-col justify-center items-center h-full gap-4">
-										<h2 className="text-offwhite font-bold text-lg uppercase">
+									<div className="flex flex-col justify-center items-center h-full gap-4 xl:gap-8">
+										<h2 className="text-offwhite font-bold text-lg uppercase xl:text-3xl">
 											{project.title}
 										</h2>
 										<motion.a
