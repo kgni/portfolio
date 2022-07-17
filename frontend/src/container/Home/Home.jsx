@@ -6,8 +6,8 @@ const Home = () => {
 	return (
 		<>
 			<Page id="home" styles="bg-beige text-primary">
-				<div className="flex flex-col justify-center items-center h-full">
-					<h1 className="text-homepage font-black mb-7 ">
+				<div className="flex flex-col justify-center items-center h-full md:justify-start md:pt-40 xs:pt-30">
+					<h1 className="text-homepage font-black mb-7 xl:text-center ">
 						<motion.span
 							initial={{ x: -2000 }}
 							animate={{ x: 0 }}
@@ -16,7 +16,7 @@ const Home = () => {
 								stiffness: 500,
 								default: { duration: 2 },
 							}}
-							className="block"
+							className="block xl:text-[25vw]"
 						>
 							WEB
 						</motion.span>
@@ -38,7 +38,7 @@ const Home = () => {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 2, default: { duration: 1.5 } }}
-						className="text-center tracking-widest"
+						className="text-center tracking-widest xs:text-xs"
 					>
 						KARL NIELSEN
 					</motion.h2>

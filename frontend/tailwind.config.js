@@ -11,7 +11,15 @@ module.exports = {
 				offwhite: '#F7F7F7',
 			},
 
-			screens: {},
+			screens: {
+				// change from the default mobile-first breakpoints to desktop-first, breakpoints are the same.
+				xs: { max: '460px' },
+				sm: { max: '640px' },
+				md: { max: '768px' },
+				lg: { max: '1024px' },
+				xl: { max: '1280px' },
+				'2xl': { max: '1536px' },
+			},
 
 			letterSpacing: {
 				widest: '.80em',

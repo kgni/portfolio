@@ -8,7 +8,7 @@ import Footer from './container/Footer/Footer';
 function App() {
 	return (
 		<>
-			<div className="snap-y snap-mandatory overflow-x-hidden">
+			<div className="overflow-x-hidden">
 				<Navbar />
 				<Home />
 				<About />
