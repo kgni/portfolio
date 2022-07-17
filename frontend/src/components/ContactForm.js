@@ -77,7 +77,7 @@ export const ContactForm = () => {
 				onFocus={(e) => (e.target.placeholder = '')}
 				onBlur={(e) => (e.target.placeholder = 'write your message here...')}
 				placeholder="write your message here..."
-				className="w-full mb-3 p-4 h-48"
+				className="w-full mb-3 p-4 h-48 lg:h-64"
 				name="message"
 				// required
 			/>
@@ -85,7 +85,7 @@ export const ContactForm = () => {
 			<IconContext.Provider value={{ className: 'contact-button-icons' }}>
 				<motion.button
 					transition={{ duration: 1 }}
-					className={`w-full flex justify-center items-center gap-2 relative bg-primary text-offwhite font-semibold py-2 cursor-pointer duration-200 ${
+					className={`w-full flex justify-center items-center gap-2 relative bg-primary hover:bg-[#2b3d55] text-offwhite font-semibold py-2 cursor-pointer duration-200 ${
 						isFulfilled && 'bg-green-600'
 					} ${isRejected && 'bg-red-600'}`}
 				>

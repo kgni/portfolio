@@ -5,8 +5,10 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { IconContext } from 'react-icons';
 import { motion } from 'framer-motion';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Contact = () => {
+	const isDesktop = useMediaQuery('(max-width: 1624px)');
 	return (
 		<Page id="contact" styles="bg-light-green">
 			<div className="mb-16">
@@ -14,11 +16,20 @@ const Contact = () => {
 			</div>
 			<div className="flex gap-20">
 				<div className="w-1/2 text-lg">
-					<h3 className="text-3xl tracking-wider mb-8 font-semibold">
-						YOU DESERVE A BEAUTIFUL WEBSITE!
-					</h3>
+					{isDesktop ? (
+						<h3 className="text-3xl tracking-wider mb-1 font-semibold lg:text-2xl">
+							YOU DESERVE...
+							<span className="lg:block 3xl:block"> A BEAUTIFUL WEBSITE!</span>
+						</h3>
+					) : (
+						<h3 className="text-3xl tracking-wider mb-1 font-semibold lg:text-xl">
+							YOU DESERVE
+							<span className="lg:block"> A BEAUTIFUL WEBSITE!</span>
+						</h3>
+					)}
+
 					<div className="flex flex-col gap-4 leading-loose">
-						<p>
+						<p className="mt-8 3xl: mt-2">
 							I help small businesses stand out on the web by providing them
 							with a unique custom website.
 						</p>
@@ -56,7 +67,7 @@ const Contact = () => {
 					</div>
 				</div>
 				<div className="w-1/2">
-					<h3 className="text-3xl tracking-wider mb-1 font-semibold uppercase">
+					<h3 className="text-3xl tracking-wider mb-1 font-semibold uppercase lg:text-2xl">
 						I'm open to work!
 					</h3>
 					<motion.div

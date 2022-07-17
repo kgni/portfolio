@@ -1,6 +1,7 @@
 import React from 'react';
 import Page from '../Page';
 import { motion } from 'framer-motion';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Home = () => {
 	return (
