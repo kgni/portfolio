@@ -1,7 +1,7 @@
 import React from 'react';
 import { urlFor } from '../../client';
 import { AiFillGithub, AiOutlineLink, AiOutlineClose } from 'react-icons/ai';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
@@ -21,17 +21,24 @@ const ProjectModal = ({
 
 	return (
 		<>
-			<motion.div
-				animate={{ opacity: [0, 1] }}
-				transition={{ duration: 0.1 }}
-				onClick={() => closeModal()}
-				className="fixed top-0 left-0 right-0 bottom-0 bg-black/90 z-30"
-			></motion.div>
+			<AnimatePresence>
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.2 }}
+					onClick={() => closeModal()}
+					exit={{
+						opacity: 0,
+						transition: 1,
+					}}
+					className="fixed top-0 left-0 right-0 bottom-0 bg-black/90 z-30"
+				></motion.div>
+			</AnimatePresence>
 			<motion.div
 				// initial={{ x: '100%' }}
 				animate={{ y: [-800, -220] }}
 				transition={{ duration: 0.3 }}
-				exit={{ y: -800 }}
+				exit={{ y: -800, duration: 1 }}
 				className="fixed top-80 shadow-xl inset-x-0 w-[700px] mx-auto z-40  bg-offwhite rounded-md"
 			>
 				<AiOutlineClose

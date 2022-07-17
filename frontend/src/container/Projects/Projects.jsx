@@ -35,9 +35,9 @@ const Projects = () => {
 				<div className="h-full  text-primary">
 					<h2 className="text-8xl font-bold mb-16">PROJECTS</h2>
 
-					<div className="projects-container grid grid-cols-4">
+					<motion.div className="projects-container grid grid-cols-4">
 						{projects.map((project, index) => (
-							<div key={index} className="card relative">
+							<motion.div key={index} className="card relative">
 								<img src={urlFor(project.imgUrl)} alt={project.title} />
 								<motion.div
 									className="absolute w-full h-full top-0 bg-black/70"
@@ -46,7 +46,6 @@ const Projects = () => {
 									transition={{
 										duration: 0.15,
 										ease: 'easeInOut',
-										staggerChildren: 0.5,
 									}}
 								>
 									<div className="flex flex-col justify-center items-center h-full gap-4">
@@ -61,9 +60,9 @@ const Projects = () => {
 										</motion.a>
 									</div>
 								</motion.div>
-							</div>
+							</motion.div>
 						))}
-					</div>
+					</motion.div>
 				</div>
 			</Page>
 		</>

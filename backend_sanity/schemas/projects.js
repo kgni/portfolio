@@ -39,7 +39,10 @@ export default {
 			of: [{ type: 'string' }],
 			options: {
 				list: [
-					{ title: 'HTML', value: 'html' },
+					{
+						title: 'HTML',
+						value: 'html',
+					},
 					{ title: 'CSS', value: 'css' },
 					{ title: 'JavaScript', value: 'JavaScript' },
 					{ title: 'React', value: 'react' },

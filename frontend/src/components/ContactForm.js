@@ -1,6 +1,10 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 import { Oval } from 'react-loader-spinner';
+import { IconContext } from 'react-icons';
+import { MdErrorOutline } from 'react-icons/md';
+import { AiOutlineCheck } from 'react-icons/ai';
 
 export const ContactForm = () => {
 	const [isPending, setIsPending] = useState(false);
@@ -12,27 +16,39 @@ export const ContactForm = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 		setIsPending(true);
+		setIsFulfilled(false);
+		setIsRejected(false);
 
-		// emailjs
-		// 	.sendForm(
-		// 		'service_e2xbj56',
-		// 		process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-		// 		form.current,
-		// 		process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-		// 	)
-		// 	.then(
-		// 		(result) => {
-		// 			console.log(result.text);
-		// 			console.log('Message Sent');
-		// 			setIsPending(false);
-		// 			setIsFulfilled(true);
-		// 		},
-		// 		(error) => {
-		// 			console.log(error.text);
-		// 			setIsPending(false);
-		// 			setIsRejected(false);
-		// 		}
-		// 	);
+		emailjs
+			.sendForm(
+				'service_e2xbj56',
+				process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+				form.current,
+				process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+					console.log('Message Sent');
+
+					setIsPending(false);
+					setIsRejected(false);
+					setIsFulfilled(true);
+
+					setTimeout(() => {
+						setIsFulfilled(false);
+					}, 3000);
+				},
+				(error) => {
+					console.log(error.text);
+					setIsPending(false);
+					setIsFulfilled(false);
+					setIsRejected(true);
+					setTimeout(() => {
+						setIsRejected(false);
+					}, 3000);
+				}
+			);
 	};
 
 	return (
@@ -45,12 +61,12 @@ export const ContactForm = () => {
 					className="w-1/2 p-4"
 					type="text"
 					name="user_name"
-					required
+					// required
 				/>
 				<input
 					onFocus={(e) => (e.target.placeholder = '')}
 					onBlur={(e) => (e.target.placeholder = 'email')}
-					required
+					// required
 					placeholder="email"
 					className="w-1/2 p-4"
 					type="email"
@@ -63,26 +79,30 @@ export const ContactForm = () => {
 				placeholder="write your message here..."
 				className="w-full mb-3 p-4 h-48"
 				name="message"
-				required
+				// required
 			/>
 			{/* // TODO - Animations: - pending, fulfilled, rejected, modal popup on error or success */}
-			<button
-				className={`w-full flex justify-center items-center gap-2 relative bg-primary text-offwhite font-semibold py-2 cursor-pointer duration-200 ${
-					isFulfilled && 'bg-green-900'
-				} ${isRejected && 'bg-red-800'}`}
-			>
-				SEND
-				{isPending && (
-					<Oval
-						color="#F7F7F7"
-						secondaryColor="#F7F7F7"
-						height={15}
-						width={15}
-						strokeWidth={5}
-					/>
-				)}
-				{isFulfilled && 'YES'}
-			</button>
+			<IconContext.Provider value={{ className: 'contact-button-icons' }}>
+				<motion.button
+					transition={{ duration: 1 }}
+					className={`w-full flex justify-center items-center gap-2 relative bg-primary text-offwhite font-semibold py-2 cursor-pointer duration-200 ${
+						isFulfilled && 'bg-green-600'
+					} ${isRejected && 'bg-red-600'}`}
+				>
+					SEND
+					{isPending && (
+						<Oval
+							color="#F7F7F7"
+							secondaryColor="#F7F7F7"
+							height={15}
+							width={15}
+							strokeWidth={5}
+						/>
+					)}
+					{isFulfilled && <AiOutlineCheck />}
+					{isRejected && <MdErrorOutline />}
+				</motion.button>
+			</IconContext.Provider>
 		</form>
 	);
 };

@@ -35,7 +35,7 @@ const Contact = () => {
 									target="_blank"
 									rel="noreferrer noopener"
 								>
-									<FaGithub />
+									<FaLinkedin />
 								</motion.a>
 								<motion.a
 									whileHover={{ scale: 1.1 }}
@@ -43,7 +43,7 @@ const Contact = () => {
 									target="_blank"
 									rel="noreferrer noopener"
 								>
-									<FaLinkedin />
+									<FaGithub />
 								</motion.a>
 								<motion.a
 									whileHover={{ scale: 1.05 }}

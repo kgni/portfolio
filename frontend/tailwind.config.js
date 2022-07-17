@@ -18,7 +18,7 @@ module.exports = {
 			},
 
 			fontSize: {
-				homepage: ['15rem', 0.9],
+				homepage: ['13vw', 0.9],
 			},
 
 			keyframes: {
