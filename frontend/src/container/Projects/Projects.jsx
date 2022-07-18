@@ -33,14 +33,16 @@ const Projects = () => {
 
 			<Page id="projects" styles="bg-offwhite">
 				<div className="h-full  text-primary">
-					<h2 className="text-8xl font-bold mb-16">PROJECTS</h2>
+					<h2 className="mb-16 text-8xl font-bold xs:text-7xl xxs:mb-8 xxxs:text-4xl">
+						PROJECTS
+					</h2>
 
 					<motion.div className="projects-container grid grid-cols-4 xl:grid-cols-2 xl:gap-2 lg:grid-cols-1">
 						{projects.map((project, index) => (
 							<motion.div key={index} className="card relative xl:shadow-md">
 								<img src={urlFor(project.imgUrl)} alt={project.title} />
 								<motion.div
-									className="absolute w-full h-full top-0 bg-black/70"
+									className="absolute top-0 h-full w-full bg-black/70"
 									initial={{ opacity: 0 }}
 									whileHover={{ opacity: [0, 1] }}
 									transition={{
@@ -48,13 +50,13 @@ const Projects = () => {
 										ease: 'easeInOut',
 									}}
 								>
-									<div className="flex flex-col justify-center items-center h-full gap-4 xl:gap-8">
-										<h2 className="text-offwhite font-bold text-lg uppercase xl:text-3xl">
+									<div className="flex h-full flex-col items-center justify-center gap-4 xl:gap-8">
+										<h2 className="text-lg font-bold uppercase text-offwhite xl:text-3xl">
 											{project.title}
 										</h2>
 										<motion.a
 											onClick={() => toggleModal(project._id)}
-											className="text-primary text-sm bg-offwhite rounded-full font-bold py-1 px-4  hover:px-6 duration-200 hover:ring-1 hover:ring-black cursor-pointer"
+											className="cursor-pointer rounded-full bg-offwhite py-1 px-4 text-sm font-bold  text-primary duration-200 hover:px-6 hover:ring-1 hover:ring-black"
 										>
 											SHOW
 										</motion.a>

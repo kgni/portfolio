@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { urlFor } from '../../client';
 import { AiFillGithub, AiOutlineLink, AiOutlineClose } from 'react-icons/ai';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -19,7 +20,7 @@ const ProjectModal = ({
 	};
 	if (!isModalShown) return null;
 
-	return (
+	return ReactDOM.createPortal(
 		<>
 			<AnimatePresence>
 				<motion.div
@@ -104,7 +105,8 @@ const ProjectModal = ({
 					</div>
 				</div>
 			</motion.div>
-		</>
+		</>,
+		document.getElementById('portal')
 	);
 };
 

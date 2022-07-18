@@ -53,7 +53,7 @@ export const ContactForm = () => {
 
 	return (
 		<form ref={form} className="w-full" onSubmit={sendEmail}>
-			<div className="flex gap-3 mb-3 h-10">
+			<div className="mb-3 flex h-10 gap-3">
 				<input
 					onFocus={(e) => (e.target.placeholder = '')}
 					onBlur={(e) => (e.target.placeholder = 'name')}
@@ -77,7 +77,7 @@ export const ContactForm = () => {
 				onFocus={(e) => (e.target.placeholder = '')}
 				onBlur={(e) => (e.target.placeholder = 'write your message here...')}
 				placeholder="write your message here..."
-				className="w-full mb-3 p-4 h-48 lg:h-64"
+				className="xs:h-46 mb-3 h-48 w-full p-4 lg:h-64 md:h-48"
 				name="message"
 				// required
 			/>
@@ -85,7 +85,7 @@ export const ContactForm = () => {
 			<IconContext.Provider value={{ className: 'contact-button-icons' }}>
 				<motion.button
 					transition={{ duration: 1 }}
-					className={`w-full flex justify-center items-center gap-2 relative bg-primary hover:bg-[#2b3d55] text-offwhite font-semibold py-2 cursor-pointer duration-200 ${
+					className={`relative flex w-full cursor-pointer items-center justify-center gap-2 bg-primary py-2 font-semibold text-offwhite duration-200 hover:bg-primary-hover ${
 						isFulfilled && 'bg-green-600'
 					} ${isRejected && 'bg-red-600'}`}
 				>

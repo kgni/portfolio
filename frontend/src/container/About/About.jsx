@@ -31,22 +31,22 @@ const About = () => {
 						repeat: Infinity,
 						repeatType: 'reverse',
 					}}
-					className="absolute right-40 w-96 cursor-grab active:cursor-grabbing z-20"
+					className="absolute right-40 z-20 w-96 cursor-grab active:cursor-grabbing"
 					src={images.astronaut}
 					alt=""
 				/>
-				<div className="flex gap-8 items-center mb-16">
-					<h2 className="text-8xl font-bold text-offwhite">ABOUT</h2>
+				<div className="mb-16 flex items-center gap-8">
+					<h2 className="text-8xl font-bold text-offwhite ">ABOUT</h2>
 					<motion.img
-						className="rounded-full w-24 cursor-pointer"
+						className="w-24 cursor-pointer rounded-full"
 						src={images.pbImage}
 						alt=""
 					/>
 				</div>
-				<div className="h-full flex flex-col text-offwhite">
-					<div className="leading-8 w-3/6 text-xl">
+				<div className="flex h-full flex-col text-offwhite">
+					<div className="w-3/6 text-xl leading-8">
 						<div className="mb-14">
-							<h3 className="text-4xl font-semibold mb-6">Hi, I'm Karl!</h3>
+							<h3 className="mb-6 text-4xl font-semibold">Hi, I'm Karl!</h3>
 							<p className="mb-2">
 								Software developer from Denmark{' '}
 								<Flag className="inline w-4" code={'DK'} />, currently living in
@@ -70,15 +70,15 @@ const About = () => {
 							</p>
 						</div>
 						<div className="skills">
-							<h3 className="text-xl font-bold uppercase mb-1">Skills</h3>
+							<h3 className="mb-1 text-xl font-bold uppercase">Skills</h3>
 							<motion.div
 								initial={{ width: '0%' }}
 								whileInView={{ width: '100%' }}
 								transition={{ bounce: 0, type: 'spring', duration: 1.2 }}
 								viewport={{ once: true }}
-								className="bg-offwhite w-full h-1 mb-4"
+								className="mb-4 h-1 w-full bg-offwhite"
 							></motion.div>
-							<div className="grid grid-cols-6 items-center place-items-center gap-x-8 gap-y-4 ">
+							<div className="grid grid-cols-6 place-items-center items-center gap-x-8 gap-y-4 ">
 								{/* HTML */}
 
 								<img

@@ -6,8 +6,8 @@ const Home = () => {
 	return (
 		<>
 			<Page id="home" styles="bg-beige text-primary">
-				<div className="flex flex-col justify-center items-center h-full md:justify-start md:pt-40 xs:pt-30">
-					<h1 className="text-homepage font-black mb-7 xl:text-center ">
+				<div className="xs:pt-30 flex h-full flex-col items-center justify-center md:justify-start md:pt-40 xxs:pt-28">
+					<h1 className="mb-7 text-homepage font-black xl:text-center ">
 						<motion.span
 							initial={{ x: -2000 }}
 							animate={{ x: 0 }}

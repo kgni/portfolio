@@ -2,24 +2,25 @@
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
+		screens: {
+			'3xl': { max: '1624px' },
+			'2xl': { max: '1536px' },
+			xl: { max: '1280px' },
+			lg: { max: '1042px' },
+			md: { max: '775px' },
+			sm: { max: '640px' },
+			xs: { max: '570px' },
+			xxs: { max: '460px' },
+			xxxs: { max: '420px' },
+		},
 		extend: {
 			colors: {
 				primary: '#1d2939',
+				'primary-hover': '#2b3d55',
 				beige: '#f4ead7',
 				purple: '#dfd7f4',
 				'light-green': '#d7f1cb',
 				offwhite: '#F7F7F7',
-			},
-
-			screens: {
-				// change from the default mobile-first breakpoints to desktop-first, breakpoints are the same.
-				xs: { max: '460px' },
-				sm: { max: '640px' },
-				md: { max: '768px' },
-				lg: { max: '1024px' },
-				xl: { max: '1280px' },
-				'2xl': { max: '1536px' },
-				'3xl': { max: '1624px' },
 			},
 
 			letterSpacing: {
