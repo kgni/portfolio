@@ -586,9 +586,10 @@ const About = () => {
 									</div>
 								</div>
 							</div>
+							{/* TODO - Add different motion values depending on screen-size. Use media queries hook */}
 							<motion.img
-								initial={{ x: 60, y: -30 }}
-								animate={{ x: -20, y: 100 }}
+								initial={{ x: 50, y: -30 }}
+								animate={{ x: -30, y: 100 }}
 								// drag
 								// dragConstraints={{
 								// 	top: 100,
@@ -601,7 +602,7 @@ const About = () => {
 									repeat: Infinity,
 									repeatType: 'reverse',
 								}}
-								className="right-40 z-20 ml-auto h-96 w-96 xl:h-80 xl:w-80"
+								className="right-40 z-20 ml-auto h-[450px] w-[450px] xl:h-80 xl:w-80"
 								src={images.astronaut}
 								alt=""
 							/>
