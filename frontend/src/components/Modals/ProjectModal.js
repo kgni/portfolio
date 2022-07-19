@@ -32,7 +32,7 @@ const ProjectModal = ({
 						opacity: 0,
 						transition: 1,
 					}}
-					className="fixed top-0 left-0 right-0 bottom-0 bg-black/90 z-30"
+					className="fixed top-0 left-0 right-0 bottom-0 z-30 bg-black/90"
 				></motion.div>
 			</AnimatePresence>
 			<motion.div
@@ -40,21 +40,23 @@ const ProjectModal = ({
 				animate={{ y: [-800, -220] }}
 				transition={{ duration: 0.3 }}
 				exit={{ y: -800, duration: 1 }}
-				className="fixed top-80 shadow-xl inset-x-0 w-[700px] mx-auto z-40  bg-offwhite rounded-md"
+				className="fixed inset-x-0 top-80 z-40 mx-auto w-[700px] rounded-md bg-offwhite  shadow-xl lg:w-3/4"
 			>
 				<AiOutlineClose
 					onClick={() => closeModal()}
-					className="absolute cursor-pointer -top-7 right-0 text-white w-5 h-5"
+					className="absolute -top-7 right-0 h-5 w-5 cursor-pointer text-white"
 				/>
 
 				<img src={urlFor(project.imgUrl)} alt="" />
-				<div className="px-24 pt-6 pb-12">
-					<h3 className="uppercase text-center font-bold text-4xl mb-4">
+				<div className="px-24 pt-6 pb-12 lg:px-12 xxs:px-4">
+					<h3 className="mb-4 text-center text-4xl font-bold uppercase lg:text-2xl xxxs:text-base">
 						{project.title}
 					</h3>
-					<p className="mb-6 text-center">{project.description}</p>
+					<p className="mb-6 text-center lg:text-sm xxxs:text-xs">
+						{project.description}
+					</p>
 					<div className="technologies mb-12">
-						<h4 className="uppercase font-bold text-center mb-4">
+						<h4 className="mb-4 text-center font-bold uppercase xxxs:text-sm">
 							Created With
 						</h4>
 						<div className="flex justify-center gap-4 ">
@@ -69,7 +71,7 @@ const ProjectModal = ({
 											<motion.img
 												whileHover={{ scale: 1.05 }}
 												id={technology}
-												className="w-12 cursor-pointer"
+												className="w-12 cursor-pointer lg:w-10 xxs:w-8"
 												// animate={{ opacity: [0, 1] }}
 												src={`./technologies/${technology}.png`}
 												alt=""
@@ -84,7 +86,7 @@ const ProjectModal = ({
 					<div className="flex items-center justify-center gap-4 text-xl">
 						<motion.a
 							whileHover={{ scale: 1.05 }}
-							className="flex items-center gap-1 ring-2 ring-black px-4 py-1 rounded"
+							className="flex items-center gap-1 rounded px-4 py-1 ring-2 ring-black"
 							target="_blank"
 							rel="noreferrer"
 							href={project.projectLink}
@@ -94,7 +96,7 @@ const ProjectModal = ({
 						</motion.a>
 						<motion.a
 							whileHover={{ scale: 1.05 }}
-							className="flex items-center gap-1 ring-2 text-offwhite bg-black ring-black px-4 py-1 rounded"
+							className="flex items-center gap-1 rounded bg-black px-4 py-1 text-offwhite ring-2 ring-black"
 							target="_blank"
 							rel="noreferrer noopener"
 							href={project.codeLink}

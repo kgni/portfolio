@@ -11,7 +11,7 @@ const Projects = () => {
 	const [isModalShown, setIsModalShown] = useState(false);
 	const [modalData, setModalData] = useState(null);
 
-	const isOneCard = useMediaQuery('(max-width: 1042px)');
+	const isOneCard = useMediaQuery('(max-width: 1100px)');
 
 	const [position, setPosition] = useState(0);
 
@@ -51,7 +51,7 @@ const Projects = () => {
 
 			<Page id="projects" styles="bg-offwhite">
 				<div className="h-full  text-primary">
-					<h2 className="text-8xl font-bold text-primary md:mb-4 md:text-4xl">
+					<h2 className="mb-16 text-8xl font-bold text-primary md:mb-4 md:text-4xl">
 						PROJECTS
 					</h2>
 					{isOneCard ? (
@@ -105,7 +105,7 @@ const Projects = () => {
 							</motion.div>
 						</>
 					) : (
-						<motion.div className="projects-container grid grid-cols-4 xl:grid-cols-2 xl:gap-2 lg:grid-cols-1">
+						<motion.div className="projects-container grid grid-cols-4">
 							{projects.map((project, index) => (
 								<motion.div key={index} className="card relative xl:shadow-md">
 									<img src={urlFor(project.imgUrl)} alt={project.title} />
@@ -118,8 +118,8 @@ const Projects = () => {
 											ease: 'easeInOut',
 										}}
 									>
-										<div className="flex h-full flex-col items-center justify-center gap-4 xl:gap-8">
-											<h2 className="text-lg font-bold uppercase text-offwhite xl:text-3xl">
+										<div className="flex h-full flex-col items-center justify-center gap-4">
+											<h2 className="text-lg font-bold uppercase text-offwhite">
 												{project.title}
 											</h2>
 											<motion.a
