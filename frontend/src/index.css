@@ -16,19 +16,15 @@ html {
 	display: none;
 }
 
-.skills img {
+.skills img,
+.skills svg {
 	width: 3rem;
 }
 .skills img,
 .skills svg {
 	cursor: pointer;
-	transition: 200ms;
 }
 
-.skills img:hover,
-.skills svg:hover {
-	transform: translateY(-10px);
-}
 /* 
 #about {
 	position: relative;
