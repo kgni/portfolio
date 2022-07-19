@@ -51,7 +51,7 @@ const Projects = () => {
 
 			<Page id="projects" styles="bg-offwhite">
 				<div className="h-full  text-primary">
-					<h2 className="mb-16 text-8xl font-bold xs:text-7xl xxs:mb-8 xxxs:text-4xl">
+					<h2 className="text-8xl font-bold text-primary md:mb-4 md:text-4xl">
 						PROJECTS
 					</h2>
 					{isOneCard ? (

@@ -11,8 +11,8 @@ const Contact = () => {
 	const isDesktop = useMediaQuery('(max-width: 1624px)');
 	return (
 		<Page id="contact" styles="bg-light-green">
-			<div className="mb-16 xs:mb-8">
-				<h2 className="text-8xl font-bold text-primary xs:text-7xl xxs:mb-4 xxxs:text-4xl">
+			<div className="mb-16 md:mb-8">
+				<h2 className="text-8xl font-bold text-primary md:mb-4 md:text-4xl">
 					CONTACT
 				</h2>
 			</div>

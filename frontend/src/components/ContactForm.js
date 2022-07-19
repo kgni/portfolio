@@ -77,7 +77,7 @@ export const ContactForm = () => {
 				onFocus={(e) => (e.target.placeholder = '')}
 				onBlur={(e) => (e.target.placeholder = 'write your message here...')}
 				placeholder="write your message here..."
-				className="xs:h-46 mb-3 h-48 w-full p-4 lg:h-64 md:h-48"
+				className="xs:h-46 md:h-58 mb-3 h-48 w-full p-4 lg:h-64"
 				name="message"
 				// required
 			/>
