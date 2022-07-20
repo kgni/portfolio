@@ -86,23 +86,23 @@ const ProjectModal = ({
 					<div className="flex items-center justify-center gap-4 text-xl">
 						<motion.a
 							whileHover={{ scale: 1.05 }}
-							className="flex items-center gap-1 rounded px-4 py-1 ring-2 ring-black"
+							className="flex items-center gap-1 rounded px-4 py-1 ring-2 ring-black xxs:text-sm"
 							target="_blank"
 							rel="noreferrer"
 							href={project.projectLink}
 						>
 							<AiOutlineLink />
-							<p className="text-sm font-semibold">WEB</p>
+							<p className=" text-sm font-semibold xxs:text-xs">WEB</p>
 						</motion.a>
 						<motion.a
 							whileHover={{ scale: 1.05 }}
-							className="flex items-center gap-1 rounded bg-black px-4 py-1 text-offwhite ring-2 ring-black"
+							className="flex items-center gap-1 rounded bg-black px-4 py-1 text-offwhite ring-2 ring-black xxs:text-sm"
 							target="_blank"
 							rel="noreferrer noopener"
 							href={project.codeLink}
 						>
 							<AiFillGithub />
-							<p className="text-sm font-semibold">GITHUB</p>
+							<p className="text-sm font-semibold xxs:text-xs">GITHUB</p>
 						</motion.a>
 					</div>
 				</div>
