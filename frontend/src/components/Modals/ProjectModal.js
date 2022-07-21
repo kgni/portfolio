@@ -49,7 +49,7 @@ const ProjectModal = ({
 
 				<img src={urlFor(project.imgUrl)} alt="" />
 				<div className="px-24 pt-6 pb-12 lg:px-12 xxs:px-4">
-					<h3 className="mb-4 text-center text-4xl font-bold uppercase lg:text-2xl xxxs:text-base">
+					<h3 className="mb-4 text-center text-4xl font-bold uppercase lg:text-2xl sm:mb-2 xxxs:text-[18px]">
 						{project.title}
 					</h3>
 					<p className="mb-6 text-center lg:text-sm xxxs:text-xs">

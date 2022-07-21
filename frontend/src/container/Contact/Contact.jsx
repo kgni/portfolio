@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from '../Page';
+import Footer from '../Footer/Footer';
 import { ContactForm } from '../../components/ContactForm';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
@@ -86,6 +87,7 @@ const Contact = () => {
 					<ContactForm />
 				</div>
 			</div>
+			<Footer />
 		</Page>
 	);
 };

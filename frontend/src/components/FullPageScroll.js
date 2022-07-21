@@ -1,16 +1,16 @@
 import React from 'react';
 import Fullpage, {
 	FullPageSections,
-	FullPageSection,
+	FullpageSection,
 	FullPageNavigation,
-} from '@fullpage/react-fullpage';
+} from '@ap.cx/react-fullpage';
 
 const FullPageScroll = () => {
 	return (
 		<div>
 			<Fullpage>
 				<FullPageSections>
-					<FullPageSection></FullPageSection>
+					<FullpageSection style={{ minHeight: '100vh' }}></FullpageSection>
 				</FullPageSections>
 			</Fullpage>
 		</div>
