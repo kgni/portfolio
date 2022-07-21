@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Page from '../Page';
 import ProjectModal from '../../components/Modals/ProjectModal';
 import { motion } from 'framer-motion';
@@ -25,18 +25,18 @@ const Projects = () => {
 	}, []);
 
 	function SampleNextArrow(props) {
-		const { className, style, onClick } = props;
+		const { className, onClick } = props;
 		return (
 			<div
 				className={className}
-				style={{ ...style, display: 'block' }}
+				style={{ display: 'block' }}
 				onClick={onClick}
 			/>
 		);
 	}
 
 	function SamplePrevArrow(props) {
-		const { className, style, onClick } = props;
+		const { className, onClick } = props;
 		return (
 			<div
 				className={className}
@@ -47,6 +47,21 @@ const Projects = () => {
 			/>
 		);
 	}
+
+	const container = {
+		hidden: { opacity: 0 },
+		show: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.2,
+			},
+		},
+	};
+
+	const item = {
+		hidden: { opacity: 0 },
+		show: { opacity: 1 },
+	};
 
 	const settings = {
 		dots: true,
@@ -98,7 +113,10 @@ const Projects = () => {
 													ease: 'easeInOut',
 												}}
 											>
-												<div className="xs:gap- flex h-full flex-col items-center justify-center gap-24 lg:gap-16 md:gap-12 sm:gap-10 xxs:gap-6">
+												<div
+													onClick={() => toggleModal(project._id)}
+													className="xs:gap- flex h-full flex-col items-center justify-center gap-24 lg:gap-16 md:gap-12 sm:gap-10 xxs:gap-6"
+												>
 													<h2 className="text-6xl font-bold  uppercase text-offwhite md:text-5xl xs:text-3xl xxs:text-2xl">
 														{project.title}
 													</h2>
@@ -118,8 +136,16 @@ const Projects = () => {
 					) : (
 						<motion.div className="projects-container grid grid-cols-4">
 							{projects.map((project, index) => (
-								<motion.div key={index} className="card relative xl:shadow-md">
-									<img src={urlFor(project.imgUrl)} alt={project.title} />
+								<motion.div
+									variants={item}
+									key={index}
+									className="card relative xl:shadow-md"
+								>
+									<img
+										className="h-full"
+										src={urlFor(project.imgUrl)}
+										alt={project.title}
+									/>
 									<motion.div
 										className="absolute top-0 h-full w-full bg-black/70"
 										initial={{ opacity: 0 }}

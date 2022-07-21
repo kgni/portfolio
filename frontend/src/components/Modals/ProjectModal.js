@@ -64,7 +64,7 @@ const ProjectModal = ({
 								<>
 									<div className="flex flex-col items-center">
 										<Tippy
-											content={technology.toUpperCase()}
+											content={technology}
 											placement="bottom"
 											theme="material"
 										>

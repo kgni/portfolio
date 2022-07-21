@@ -61,16 +61,16 @@ export const ContactForm = () => {
 					className="w-1/2 p-4"
 					type="text"
 					name="user_name"
-					// required
+					required
 				/>
 				<input
 					onFocus={(e) => (e.target.placeholder = '')}
 					onBlur={(e) => (e.target.placeholder = 'email')}
-					// required
 					placeholder="email"
 					className="w-1/2 p-4"
 					type="email"
 					name="user_email"
+					required
 				/>
 			</div>
 			<textarea
@@ -79,7 +79,7 @@ export const ContactForm = () => {
 				placeholder="write your message here..."
 				className="xs:h-46 md:h-58 mb-3 h-48 w-full p-4 lg:h-64"
 				name="message"
-				// required
+				required
 			/>
 			{/* // TODO - Animations: - pending, fulfilled, rejected, modal popup on error or success */}
 			<IconContext.Provider value={{ className: 'contact-button-icons' }}>

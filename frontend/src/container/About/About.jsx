@@ -11,10 +11,26 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 const About = () => {
 	const isMobile = useMediaQuery('(max-width: 840px)');
 	const isSmallMobile = useMediaQuery('(max-width: 420px)');
+
+	const container = {
+		hidden: { opacity: 0 },
+		show: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.2,
+			},
+		},
+	};
+
+	const item = {
+		hidden: { opacity: 0 },
+		show: { opacity: 1 },
+	};
+
 	return (
 		<>
-			<ParticlesAbout />
-			<Page id="about" styles="">
+			{!isSmallMobile && <ParticlesAbout />}
+			<Page id="about" styles={`${isSmallMobile && 'bg-primary'}`}>
 				{isMobile ? (
 					<>
 						<h2 className="mb-16 text-8xl font-bold text-offwhite md:mb-4 md:text-4xl">
@@ -66,10 +82,17 @@ const About = () => {
 
 								{isSmallMobile ? (
 									<>
-										<div className="mb-4 flex items-center justify-center gap-8">
+										<motion.div
+											variants={container}
+											viewport={{ once: true }}
+											initial="hidden"
+											whileInView="show"
+											className="mb-4 flex items-center justify-center gap-8"
+										>
 											{/* HTML */}
 											<Tippy content="HTML" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
 													alt="HTML5"
@@ -79,6 +102,7 @@ const About = () => {
 											{/* CSS */}
 											<Tippy content="CSS" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
 													alt="CSS3"
@@ -87,11 +111,13 @@ const About = () => {
 
 											{/* JavaScript */}
 											<Tippy
+												variants={item}
 												content="JavaScript"
 												placement="bottom"
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
 													alt="JavaScript"
@@ -107,16 +133,24 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
 													alt="React"
 												/>
 											</Tippy>
-										</div>
-										<div className="mb-2 flex items-center justify-center gap-8">
+										</motion.div>
+										<motion.div
+											variants={container}
+											viewport={{ once: true }}
+											initial="hidden"
+											whileInView="show"
+											className="mb-2 flex items-center justify-center gap-8"
+										>
 											{/* Sass */}
 											<Tippy content="Sass" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
 													alt="Sass"
@@ -130,6 +164,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.i
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													class="devicon-tailwindcss-plain colored"
 												></motion.i>
@@ -143,6 +178,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
 													alt="Nodejs"
@@ -156,13 +192,20 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
 													alt="Mongo DB"
 												/>
 											</Tippy>
-										</div>
-										<div className="flex items-center justify-center gap-8">
+										</motion.div>
+										<motion.div
+											variants={container}
+											viewport={{ once: true }}
+											initial="hidden"
+											whileInView="show"
+											className="flex items-center justify-center gap-8"
+										>
 											{/* EXPRESS */}
 
 											<Tippy
@@ -171,6 +214,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.i
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													class="devicon-express-original"
 												></motion.i>
@@ -183,6 +227,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.i
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													class="devicon-nextjs-original-wordmark nextjs"
 												></motion.i>
@@ -197,6 +242,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
 													alt="GraphQL"
@@ -206,19 +252,27 @@ const About = () => {
 											{/* JEST */}
 											<Tippy content="Jest" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
 													alt="Jest"
 												/>
 											</Tippy>
-										</div>
+										</motion.div>
 									</>
 								) : (
 									<>
-										<div className="mb-2 flex items-center justify-between sm:justify-center sm:gap-8 xs:gap-4">
+										<motion.div
+											variants={container}
+											viewport={{ once: true }}
+											initial="hidden"
+											whileInView="show"
+											className="mb-2 flex items-center justify-between sm:justify-center sm:gap-8 xs:justify-between xs:gap-0"
+										>
 											{/* HTML */}
 											<Tippy content="HTML" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
 													alt="HTML5"
@@ -228,6 +282,7 @@ const About = () => {
 											{/* CSS */}
 											<Tippy content="CSS" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
 													alt="CSS3"
@@ -241,6 +296,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
 													alt="JavaScript"
@@ -256,6 +312,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
 													alt="React"
@@ -265,6 +322,7 @@ const About = () => {
 											{/* Sass */}
 											<Tippy content="Sass" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
 													alt="Sass"
@@ -278,12 +336,19 @@ const About = () => {
 												theme="material"
 											>
 												<motion.i
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													class="devicon-tailwindcss-plain colored"
 												></motion.i>
 											</Tippy>
-										</div>
-										<div className="flex items-center justify-between sm:justify-center sm:gap-8 xs:gap-4">
+										</motion.div>
+										<motion.div
+											variants={container}
+											viewport={{ once: true }}
+											initial="hidden"
+											whileInView="show"
+											className="flex items-center justify-between sm:justify-center sm:gap-8 xs:justify-between xs:gap-0"
+										>
 											{/* Node.js */}
 
 											<Tippy
@@ -292,6 +357,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
 													alt="Nodejs"
@@ -305,6 +371,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
 													alt="Mongo DB"
@@ -319,6 +386,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.i
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													class="devicon-express-original"
 												></motion.i>
@@ -331,6 +399,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.i
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													class="devicon-nextjs-original-wordmark nextjs"
 												></motion.i>
@@ -345,6 +414,7 @@ const About = () => {
 												theme="material"
 											>
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
 													alt="GraphQL"
@@ -354,12 +424,13 @@ const About = () => {
 											{/* JEST */}
 											<Tippy content="Jest" placement="bottom" theme="material">
 												<motion.img
+													variants={item}
 													whileHover={{ scale: 1.05 }}
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
 													alt="Jest"
 												/>
 											</Tippy>
-										</div>
+										</motion.div>
 									</>
 								)}
 							</div>
@@ -411,17 +482,19 @@ const About = () => {
 												Skills
 											</h3>
 											<motion.div
+												transition={{ duration: 1.6 }}
 												initial={{ width: '0%' }}
 												whileInView={{ width: '100%' }}
-												transition={{
-													bounce: 0,
-													type: 'spring',
-													duration: 1.2,
-												}}
 												viewport={{ once: true }}
 												className="mb-4 h-1 w-full bg-offwhite"
 											></motion.div>
-											<div className="mb-4 flex items-center justify-between">
+											<motion.div
+												variants={container}
+												viewport={{ once: true }}
+												initial="hidden"
+												whileInView="show"
+												className="mb-4 flex items-center justify-between"
+											>
 												{/* HTML */}
 												<Tippy
 													content="HTML"
@@ -429,6 +502,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
 														alt="HTML5"
@@ -442,6 +516,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
 														alt="CSS3"
@@ -455,6 +530,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
 														alt="JavaScript"
@@ -470,6 +546,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
 														alt="React"
@@ -483,6 +560,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
 														alt="Sass"
@@ -496,12 +574,19 @@ const About = () => {
 													theme="material"
 												>
 													<motion.i
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														class="devicon-tailwindcss-plain colored"
 													></motion.i>
 												</Tippy>
-											</div>
-											<div className="flex items-center justify-between ">
+											</motion.div>
+											<motion.div
+												variants={container}
+												viewport={{ once: true }}
+												initial="hidden"
+												whileInView="show"
+												className="flex items-center justify-between "
+											>
 												{/* Node.js */}
 
 												<Tippy
@@ -510,6 +595,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
 														alt="Nodejs"
@@ -523,6 +609,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
 														alt="Mongo DB"
@@ -537,6 +624,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.i
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														class="devicon-express-original"
 													></motion.i>
@@ -549,6 +637,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.i
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														class="devicon-nextjs-original-wordmark nextjs"
 													></motion.i>
@@ -563,6 +652,7 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
 														alt="GraphQL"
@@ -576,12 +666,13 @@ const About = () => {
 													theme="material"
 												>
 													<motion.img
+														variants={item}
 														whileHover={{ scale: 1.05 }}
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
 														alt="Jest"
 													/>
 												</Tippy>
-											</div>
+											</motion.div>
 										</div>
 									</div>
 								</div>
@@ -602,7 +693,7 @@ const About = () => {
 									repeat: Infinity,
 									repeatType: 'reverse',
 								}}
-								className="right-40 z-20 ml-auto h-[450px] w-[450px] xl:h-80 xl:w-80"
+								className="right-40 ml-auto h-[450px] w-[450px] xl:h-80 xl:w-80"
 								src={images.astronaut}
 								alt=""
 							/>
