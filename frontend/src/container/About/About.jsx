@@ -29,8 +29,8 @@ const About = () => {
 
 	return (
 		<>
-			{!isSmallMobile && <ParticlesAbout width="100%" height="400" />}
-			<Page id="about">
+			{/* {!isSmallMobile && <ParticlesAbout />} */}
+			<Page id="about" styles="bg-primary">
 				{isMobile ? (
 					<>
 						<h2 className="mb-16 text-8xl font-bold text-offwhite md:mb-4 md:text-4xl">
