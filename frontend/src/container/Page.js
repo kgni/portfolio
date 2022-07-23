@@ -4,7 +4,7 @@ const Page = ({ children, styles, id }) => {
 		<>
 			<section
 				id={id}
-				className={`section relative h-screen overflow-hidden ${
+				className={`section relative min-h-screen overflow-hidden ${
 					id === 'home'
 						? 'h-screen grow pt-16 pb-24 xs:pb-0'
 						: 'pt-28 pb-24 md:h-auto md:pt-20 md:pb-20'

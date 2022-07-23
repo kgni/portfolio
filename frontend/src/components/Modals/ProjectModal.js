@@ -40,14 +40,14 @@ const ProjectModal = ({
 				animate={{ y: [-800, -220] }}
 				transition={{ duration: 0.3 }}
 				exit={{ y: -800, duration: 1 }}
-				className="fixed inset-x-0 top-80 z-40 mx-auto w-[700px] rounded-md bg-offwhite  shadow-xl lg:w-3/4"
+				className="fixed inset-x-0 top-80 z-40 mx-auto h-auto w-[500px] rounded-md bg-offwhite  shadow-xl lg:w-3/4"
 			>
 				<AiOutlineClose
 					onClick={() => closeModal()}
 					className="absolute -top-7 right-0 h-5 w-5 cursor-pointer text-white"
 				/>
 
-				<img src={urlFor(project.imgUrl)} alt="" />
+				<img className="w-full" src={urlFor(project.imgUrl)} alt="" />
 				<div className="px-24 pt-6 pb-12 lg:px-12 xxs:px-4">
 					<h3 className="mb-4 text-center text-4xl font-bold uppercase lg:text-2xl sm:mb-2 xxxs:text-[18px]">
 						{project.title}

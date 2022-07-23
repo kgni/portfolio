@@ -32,6 +32,11 @@ canvas {
 	position: absolute;
 	z-index: -1;
 	background-color: #1d2939;
+	height: 400% !important;
+}
+
+#tsparticles {
+	background-color: #1d2939;
 }
 
 /* Scrollbar */
