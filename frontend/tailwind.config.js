@@ -21,6 +21,7 @@ module.exports = {
 				purple: '#dfd7f4',
 				'light-green': '#d7f1cb',
 				offwhite: '#F7F7F7',
+				'offwhite-hover': '#d2d2d2',
 			},
 
 			letterSpacing: {

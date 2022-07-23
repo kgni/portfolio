@@ -58,14 +58,14 @@ const About = () => {
 							</p>
 							<p className="mb-4">
 								Feel free to check out my{' '}
-								<a
-									className="text-xl font-bold underline"
+								<motion.a
+									className="text-xl font-bold underline duration-100 hover:text-primary-hover"
 									href="https://docs.google.com/document/d/1exdVLZLkl-n1u9k7C-QoMhjcb2b1MRXT/edit?usp=sharing&ouid=106838936484591987660&rtpof=true&sd=true"
 									target="_blank"
 									rel="noreferrer noopener"
 								>
 									resume
-								</a>
+								</motion.a>
 								, or scroll to the next page for my projects!
 							</p>
 							<div className="skills">
@@ -466,14 +466,14 @@ const About = () => {
 											</p>
 											<p>
 												Feel free to check out my{' '}
-												<a
-													className="text-3xl font-bold underline"
+												<motion.a
+													className="text-3xl font-bold underline duration-100 hover:text-offwhite-hover"
 													href="https://docs.google.com/document/d/1exdVLZLkl-n1u9k7C-QoMhjcb2b1MRXT/edit?usp=sharing&ouid=106838936484591987660&rtpof=true&sd=true"
 													target="_blank"
 													rel="noreferrer noopener"
 												>
 													resume
-												</a>
+												</motion.a>
 												, or scroll to the next page for my projects!
 											</p>
 										</div>

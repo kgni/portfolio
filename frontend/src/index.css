@@ -28,6 +28,43 @@ html {
 	font-size: 3.6rem;
 }
 
+canvas {
+	position: absolute;
+	z-index: -1;
+	background-color: #1d2939;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #f7f7f7;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #1d2939;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(12, 6, 59, 0.6);
+}
+
+/* contact-form button icons */
+
+.contact-button-icons {
+	width: 15;
+	height: 15;
+	color: #f7f7f7;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	color: #1d2939 !important;
+}
+
 @media screen and (max-width: 1280px) {
 	.skills img,
 	.skills svg,
@@ -38,51 +75,7 @@ html {
 	}
 }
 
-@media screen and (max-width: 1042px) {
-	.skills img,
-	.skills svg,
-	.skills i {
-		width: 2.4rem;
-		cursor: pointer;
-		font-size: 2rem;
-	}
-}
-@media screen and (max-width: 640px) {
-	.skills img,
-	.skills svg,
-	.skills i {
-		width: 2rem;
-		cursor: pointer;
-		font-size: 2rem;
-	}
-}
-
-@media screen and (max-width: 570px) {
-	.skills .nextjs {
-		font-size: 2.8rem;
-	}
-}
-
-@media screen and (max-width: 420px) {
-	.skills img,
-	.skills svg,
-	.skills i {
-		width: 1.5rem;
-		cursor: pointer;
-		font-size: 1.5rem;
-	}
-}
-
-/* 
-#about {
-	position: relative;
-} */
-
-canvas {
-	position: absolute;
-	z-index: -1;
-	background-color: #1d2939;
-}
+/* NAVBAR MOBILE */
 
 @media screen and (max-width: 900px) {
 	.navbar-desktop {
@@ -119,7 +112,7 @@ canvas {
 		right: 0;
 		z-index: 5;
 		padding: 1rem;
-		width: 50%;
+		width: 70%;
 		height: 100vh;
 		display: flex;
 		padding-bottom: 2rem;
@@ -130,33 +123,37 @@ canvas {
 	}
 }
 
-/* Scrollbar */
-
-::-webkit-scrollbar {
-	width: 12px;
+@media screen and (max-width: 1042px) {
+	.skills img,
+	.skills svg,
+	.skills i {
+		width: 2.4rem;
+		cursor: pointer;
+		font-size: 2rem;
+	}
+}
+@media screen and (max-width: 640px) {
+	.skills img,
+	.skills svg,
+	.skills i {
+		width: 2rem;
+		cursor: pointer;
+		font-size: 2rem;
+	}
 }
 
-::-webkit-scrollbar-track {
-	background-color: #f7f7f7;
+@media screen and (max-width: 570px) {
+	.skills .nextjs {
+		font-size: 2.8rem;
+	}
 }
 
-::-webkit-scrollbar-thumb {
-	background-color: #1d2939;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: rgba(12, 6, 59, 0.6);
-}
-
-/* contact-form button icons */
-
-.contact-button-icons {
-	width: 15;
-	height: 15;
-	color: #f7f7f7;
-}
-
-.slick-prev:before,
-.slick-next:before {
-	color: #1d2939 !important;
+@media screen and (max-width: 420px) {
+	.skills img,
+	.skills svg,
+	.skills i {
+		width: 1.5rem;
+		cursor: pointer;
+		font-size: 1.5rem;
+	}
 }
