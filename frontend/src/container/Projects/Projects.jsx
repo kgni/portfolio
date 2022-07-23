@@ -15,10 +15,15 @@ const Projects = () => {
 
 	const toggleModal = (id) => {
 		const project = projects.find((project) => project._id === id);
+
+		if (!project) {
+			return;
+		}
 		setModalData(project);
 		setIsModalShown(true);
 	};
 
+	// fetching projects from sanity
 	useEffect(() => {
 		const query = '*[_type == "projects"]';
 		client.fetch(query).then((data) => setProjects(data));
@@ -47,21 +52,6 @@ const Projects = () => {
 			/>
 		);
 	}
-
-	const container = {
-		hidden: { opacity: 0 },
-		show: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.2,
-			},
-		},
-	};
-
-	const item = {
-		hidden: { opacity: 0 },
-		show: { opacity: 1 },
-	};
 
 	const settings = {
 		dots: true,
@@ -136,11 +126,7 @@ const Projects = () => {
 					) : (
 						<motion.div className="projects-container grid grid-cols-4">
 							{projects.map((project, index) => (
-								<motion.div
-									variants={item}
-									key={index}
-									className="card relative xl:shadow-md"
-								>
+								<motion.div key={index} className="card relative xl:shadow-md">
 									<img
 										className="h-full"
 										src={urlFor(project.imgUrl)}
