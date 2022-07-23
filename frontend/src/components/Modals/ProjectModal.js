@@ -40,7 +40,7 @@ const ProjectModal = ({
 				animate={{ y: [-800, -220] }}
 				transition={{ duration: 0.3 }}
 				exit={{ y: -800, duration: 1 }}
-				className="fixed inset-x-0 top-[35%] z-40 mx-auto block max-h-[80%] max-w-[500px] overflow-y-auto rounded-md bg-offwhite shadow-xl lg:w-3/4"
+				className="fixed inset-x-0 top-[35%] z-40 mx-auto block max-h-[90%] max-w-[500px] overflow-y-auto rounded-md bg-offwhite shadow-xl lg:w-3/4"
 			>
 				<AiOutlineClose
 					onClick={() => closeModal()}
