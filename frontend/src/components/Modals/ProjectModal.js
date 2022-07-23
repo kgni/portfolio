@@ -40,7 +40,7 @@ const ProjectModal = ({
 				animate={{ y: [-800, -220] }}
 				transition={{ duration: 0.3 }}
 				exit={{ y: -800, duration: 1 }}
-				className="fixed inset-x-0 top-80 z-40 mx-auto w-[450px] rounded-md bg-offwhite  shadow-xl lg:w-3/4"
+				className="fixed inset-x-0 top-[50%] z-40 mx-auto block max-h-[80%] max-w-[500px] overflow-y-auto rounded-md bg-offwhite shadow-xl lg:w-3/4"
 			>
 				<AiOutlineClose
 					onClick={() => closeModal()}
@@ -71,7 +71,7 @@ const ProjectModal = ({
 											<motion.img
 												whileHover={{ scale: 1.05 }}
 												id={technology}
-												className="w-8 cursor-pointer lg:w-10 xxs:w-8"
+												className="w-10 cursor-pointer lg:w-10 xxs:w-8"
 												// animate={{ opacity: [0, 1] }}
 												src={`./technologies/${technology}.png`}
 												alt=""
