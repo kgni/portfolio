@@ -81,10 +81,10 @@ const Projects = () => {
 					</h2>
 					{isOneCard ? (
 						<>
-							<motion.div className="carousel min-w-full">
+							<div className="carousel min-w-full">
 								<Slider {...settings}>
 									{projects.map((project, index) => (
-										<motion.div
+										<div
 											// onClick={() => toggleModal(project._id)}
 											key={index}
 											className="card relative min-w-full shadow-md"
@@ -118,13 +118,13 @@ const Projects = () => {
 													</motion.a>
 												</div>
 											</motion.div>
-										</motion.div>
+										</div>
 									))}
 								</Slider>
-							</motion.div>
+							</div>
 						</>
 					) : (
-						<motion.div className="projects-container grid grid-cols-4">
+						<div className="projects-container grid grid-cols-4">
 							{projects.map((project, index) => (
 								<motion.div key={index} className="card relative xl:shadow-md">
 									<img
@@ -155,7 +155,7 @@ const Projects = () => {
 									</motion.div>
 								</motion.div>
 							))}
-						</motion.div>
+						</div>
 					)}
 				</div>
 			</Page>

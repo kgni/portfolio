@@ -43,7 +43,7 @@ const Navbar = ({ currentPage, page }) => {
 				>
 					<ul
 						className={`flex items-center text-xl font-semibold duration-150 ${
-							isScrolled ? 'gap-6 text-sm' : 'gap-8 text-xl'
+							isScrolled ? 'gap-x-6 text-sm' : 'gap-x-8 text-xl'
 						}`}
 					>
 						{['about', 'projects', 'contact'].map((item) => (
@@ -58,7 +58,7 @@ const Navbar = ({ currentPage, page }) => {
 								</Link>
 							</motion.li>
 						))}
-						<li className="flex items-center gap-2 text-2xl">
+						<li className="flex items-center gap-x-2 text-2xl">
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
@@ -114,7 +114,7 @@ const Navbar = ({ currentPage, page }) => {
 									</Link>
 								</motion.li>
 							))}
-							<li className="mt-6 flex grow items-end justify-center gap-6 text-2xl ">
+							<li className="mt-6 flex grow items-end justify-center gap-x-6 text-2xl ">
 								<motion.a
 									whileHover={{
 										scale: 1.1,
