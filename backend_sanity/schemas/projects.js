@@ -2,6 +2,8 @@ export default {
 	name: 'projects',
 	title: 'Projects',
 	type: 'document',
+
+	sortable: true,
 	fields: [
 		{
 			name: 'title',
@@ -46,12 +48,12 @@ export default {
 					{ title: 'CSS', value: 'CSS' },
 					{ title: 'JavaScript', value: 'JavaScript' },
 					{ title: 'React', value: 'React' },
+					{ title: 'NextJS', value: 'Next.js' },
 					{ title: 'Sass', value: 'Sass' },
 					{ title: 'TailwindCSS', value: 'TailwindCSS' },
 					{ title: 'Node.js', value: 'Node.js' },
-					{ title: 'MongoDB', value: 'MongoDB' },
 					{ title: 'Express', value: 'Express' },
-					{ title: 'NextJS', value: 'Next.js' },
+					{ title: 'MongoDB', value: 'MongoDB' },
 					{ title: 'GraphQL', value: 'GraphQL' },
 					{ title: 'Jest', value: 'Jest' },
 				],
@@ -69,6 +71,14 @@ export default {
 					type: 'string',
 				},
 			],
+		},
+	],
+
+	orderings: [
+		{
+			title: 'Release Date, New',
+			name: 'releaseDateDesc',
+			by: [{ field: 'releaseDate', direction: 'desc' }],
 		},
 	],
 };
