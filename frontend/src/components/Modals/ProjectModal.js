@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { urlFor } from '../../client';
 import { AiFillGithub, AiOutlineLink, AiOutlineClose } from 'react-icons/ai';
-
-import { IoCloseSharp } from 'react-icons/io';
 import { motion, AnimatePresence } from 'framer-motion';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
