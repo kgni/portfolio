@@ -7,28 +7,27 @@ My portfolio site containg projects and contact information
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, SASS, JavaScript
+**Tech used:** HTML, CSS, React, Tailwind, Sanity.io, Framer motion
 Animations is from the AOS JavaScript library.
 
 ## Optimizations
 Here is a list of what will be fixed in the future:
-  + Snapscrolling (in some browsers there is a weird quirk, where it will skip a page when scrolling)
-  + Add resume and skills to about section
-  + Redesign project section
-  + Add metatags (SEO Optimization)
-  + When submitting form have a modal popup instead of redirecting to thankyou page.
-  + Recreate website in React.
-  + Refactoring - SASS (Too much nesting going on), create CSS variables, Have a more Object-oriented apporach when it comes to CSS. In general it is lacking structure when it comes to the styles. 
+  + Redo it in NextJS for SSR or SSG
+  + There is a bug, where the occasionally projects are not being loaded from sanity.io (seems to also be browser dependant)
 
 ## Lessons Learned:
 
-Learned some stuff about SASS, at the moment I have used nesting WAY too much, which makes the code really hard to grasp and read. The styling in general is not very legible - needs to refactored with a more organized approach. Learned about SEO, including meta tags.
+One of my first projects using React & Tailwind. First time ever using a headless CMS (sanity.io).
+
+Learned about React folder structure, tailwind classes, framer motion, and how to setup and use sanity.io
+
+
 
 ## Examples:
 Take a look at these couple examples that I have in my own portfolio:
 
-**Salon Hair:** https://github.com/kgni/salonhair-valby
+**Alzh.info:** https://github.com/kgni/alzh-info
 
-**Burger Boss:** https://github.com/kgni/burger-boss
+**Salon Hair:** https://github.com/kgni/salonhair-valby
 
 **RUN AWAY:** https://github.com/kgni/run-away
