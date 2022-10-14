@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { urlFor } from '../../client';
 import { AiFillGithub, AiOutlineLink, AiOutlineClose } from 'react-icons/ai';
+
+import { IoCloseSharp } from 'react-icons/io';
 import { motion, AnimatePresence } from 'framer-motion';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
@@ -40,14 +42,17 @@ const ProjectModal = ({
 				animate={{ y: [-800, -220] }}
 				transition={{ duration: 0.3 }}
 				exit={{ y: -800, duration: 1 }}
-				className="fixed inset-x-0 top-[35%] z-40 mx-auto block max-h-[100%] max-w-[500px] overflow-y-auto rounded-md bg-offwhite shadow-xl lg:w-3/4 md:top-[50%]"
+				className="fixed inset-x-0 top-[35%] z-40 mx-auto block max-h-[100%] max-w-[500px] rounded-md bg-offwhite shadow-xl lg:w-3/4 md:top-[50%]"
 			>
 				<AiOutlineClose
 					onClick={() => closeModal()}
-					className="absolute -top-7 right-0 h-5 w-5 cursor-pointer text-white"
+					className="absolute -top-8 right-0  z-50 h-6 w-6 cursor-pointer text-white"
 				/>
-
-				<img className="h-auto w-full" src={urlFor(project.imgUrl)} alt="" />
+				<img
+					className="h-auto w-full rounded-t-md"
+					src={urlFor(project.imgUrl)}
+					alt=""
+				/>
 				<div className="min-h-full px-12 pt-6 pb-12 lg:px-12 xxs:px-4">
 					<h3 className="mb-4 text-center text-4xl font-bold uppercase lg:text-2xl sm:mb-2 xxxs:text-[18px]">
 						{project.title}
