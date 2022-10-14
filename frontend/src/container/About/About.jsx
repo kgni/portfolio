@@ -1,7 +1,6 @@
 import React from 'react';
 import Page from '../Page';
 import { images } from '../../constants';
-import ParticlesAbout from '../../components/ParticlesAbout';
 import { motion } from 'framer-motion';
 import Flag from 'react-world-flags';
 import Tippy from '@tippyjs/react';
@@ -235,8 +234,7 @@ const About = () => {
 
 											{/* GraphQL */}
 
-											{/* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" /> */}
-											<Tippy
+											{/* <Tippy
 												content="GraphQL"
 												placement="bottom"
 												theme="material"
@@ -247,7 +245,7 @@ const About = () => {
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
 													alt="GraphQL"
 												/>
-											</Tippy>
+											</Tippy> */}
 
 											{/* JEST */}
 											<Tippy content="Jest" placement="bottom" theme="material">
@@ -408,7 +406,7 @@ const About = () => {
 											{/* GraphQL */}
 
 											{/* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" /> */}
-											<Tippy
+											{/* <Tippy
 												content="GraphQL"
 												placement="bottom"
 												theme="material"
@@ -419,7 +417,7 @@ const About = () => {
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
 													alt="GraphQL"
 												/>
-											</Tippy>
+											</Tippy> */}
 
 											{/* JEST */}
 											<Tippy content="Jest" placement="bottom" theme="material">
@@ -646,7 +644,7 @@ const About = () => {
 												{/* GraphQL */}
 
 												{/* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" /> */}
-												<Tippy
+												{/* <Tippy
 													content="GraphQL"
 													placement="bottom"
 													theme="material"
@@ -657,7 +655,7 @@ const About = () => {
 														src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
 														alt="GraphQL"
 													/>
-												</Tippy>
+												</Tippy> */}
 
 												{/* JEST */}
 												<Tippy

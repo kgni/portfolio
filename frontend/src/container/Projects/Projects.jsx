@@ -126,7 +126,10 @@ const Projects = () => {
 					) : (
 						<div className="projects-container grid grid-cols-4">
 							{projects.map((project, index) => (
-								<motion.div key={index} className="card relative xl:shadow-md">
+								<motion.div
+									key={project._id}
+									className="card relative xl:shadow-md"
+								>
 									<img
 										className="h-full"
 										src={urlFor(project.imgUrl)}

@@ -59,7 +59,7 @@ const ProjectModal = ({
 						<h4 className="mb-4 text-center font-bold uppercase xxxs:text-sm">
 							Created With
 						</h4>
-						<div className="flex justify-center gap-4 ">
+						<div className="flex flex-wrap justify-center gap-4">
 							{project.technologies.map((technology) => (
 								<>
 									<div className="flex flex-col items-center">
